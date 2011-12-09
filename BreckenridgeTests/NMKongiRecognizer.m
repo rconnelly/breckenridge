@@ -13,11 +13,25 @@
 
 @implementation NMKongiRecognizer
 
-// All code under test is in the iOS Application
-- (void)testAppDelegate
+
+- (void) setUp
 {
-    id yourApplicationDelegate = [[UIApplication sharedApplication] delegate];
-    STAssertNotNil(yourApplicationDelegate, @"UIApplication failed to find the AppDelegate");
+    
 }
+
+- (void) tearDown
+{
+    
+}
+
+/** Ensure that the grid has the correct number of square regions and that they are all uniform
+ in size. */
+- (void) testThatGridIsValid
+{
+}
+
+//- (void) testThatBox
+
+
 
 @end

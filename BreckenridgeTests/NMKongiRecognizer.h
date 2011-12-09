@@ -13,4 +13,10 @@
 
 @interface NMKongiRecognizer : SenTestCase
 
+/** Ensure that the grid has the correct number of square regions and that they are all uniform
+    in size. */
+- (void) testThatGridIsValid;
+
+//- (void) testThatBox
+
 @end

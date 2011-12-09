@@ -14,7 +14,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    [TestFlight takeOff:@"Insert your Team Token here"];    
     return YES;
 }
 

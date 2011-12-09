@@ -22,6 +22,11 @@
 		C6C9A6781488062100B25F2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C9A6531488062100B25F2D /* Foundation.framework */; };
 		C6C9A6801488062100B25F2D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6C9A67E1488062100B25F2D /* InfoPlist.strings */; };
 		C6C9A6831488062200B25F2D /* BreckenridgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A6821488062200B25F2D /* BreckenridgeTests.m */; };
+		C6C9A6A714880AE800B25F2D /* NMKongiRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A6A614880AE800B25F2D /* NMKongiRecognizer.m */; };
+		C6C9A6AD14880FAF00B25F2D /* NMKongiRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A6AC14880FAF00B25F2D /* NMKongiRecognizer.m */; };
+		C6C9A6B21488162500B25F2D /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C9A6B01488162500B25F2D /* libTestFlight.a */; };
+		C6C9A771148959A400B25F2D /* NMSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A770148959A400B25F2D /* NMSetupViewController.m */; };
+		C6C9A772148959A400B25F2D /* NMSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A770148959A400B25F2D /* NMSetupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +37,13 @@
 			remoteGlobalIDString = C6C9A64C1488062100B25F2D;
 			remoteInfo = Breckenridge;
 		};
+		C6C9A6BF1488199A00B25F2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6C9A6B71488199900B25F2D /* ShareKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
+			remoteInfo = ShareKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -39,25 +51,35 @@
 		C6C9A6511488062100B25F2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6C9A6531488062100B25F2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C6C9A6551488062100B25F2D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C6C9A6591488062100B25F2D /* Breckenridge-Info.plist */ = {isa = PBXFileReference; path = "Breckenridge-Info.plist"; sourceTree = "<group>"; };
+		C6C9A6591488062100B25F2D /* Breckenridge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Breckenridge-Info.plist"; sourceTree = "<group>"; };
 		C6C9A65B1488062100B25F2D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C6C9A65D1488062100B25F2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C6C9A65F1488062100B25F2D /* Breckenridge-Prefix.pch */ = {isa = PBXFileReference; path = "Breckenridge-Prefix.pch"; sourceTree = "<group>"; };
-		C6C9A6601488062100B25F2D /* NMAppDelegate.h */ = {isa = PBXFileReference; path = NMAppDelegate.h; sourceTree = "<group>"; };
+		C6C9A65F1488062100B25F2D /* Breckenridge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Breckenridge-Prefix.pch"; sourceTree = "<group>"; };
+		C6C9A6601488062100B25F2D /* NMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMAppDelegate.h; sourceTree = "<group>"; };
 		C6C9A6611488062100B25F2D /* NMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMAppDelegate.m; sourceTree = "<group>"; };
-		C6C9A6631488062100B25F2D /* NMRootViewController.h */ = {isa = PBXFileReference; path = NMRootViewController.h; sourceTree = "<group>"; };
+		C6C9A6631488062100B25F2D /* NMRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMRootViewController.h; sourceTree = "<group>"; };
 		C6C9A6641488062100B25F2D /* NMRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMRootViewController.m; sourceTree = "<group>"; };
-		C6C9A6661488062100B25F2D /* NMDataViewController.h */ = {isa = PBXFileReference; path = NMDataViewController.h; sourceTree = "<group>"; };
+		C6C9A6661488062100B25F2D /* NMDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMDataViewController.h; sourceTree = "<group>"; };
 		C6C9A6671488062100B25F2D /* NMDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMDataViewController.m; sourceTree = "<group>"; };
-		C6C9A6691488062100B25F2D /* NMModelController.h */ = {isa = PBXFileReference; path = NMModelController.h; sourceTree = "<group>"; };
+		C6C9A6691488062100B25F2D /* NMModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMModelController.h; sourceTree = "<group>"; };
 		C6C9A66A1488062100B25F2D /* NMModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMModelController.m; sourceTree = "<group>"; };
 		C6C9A66D1488062100B25F2D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C6C9A6741488062100B25F2D /* BreckenridgeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreckenridgeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C9A6751488062100B25F2D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		C6C9A67D1488062100B25F2D /* BreckenridgeTests-Info.plist */ = {isa = PBXFileReference; path = "BreckenridgeTests-Info.plist"; sourceTree = "<group>"; };
+		C6C9A67D1488062100B25F2D /* BreckenridgeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BreckenridgeTests-Info.plist"; sourceTree = "<group>"; };
 		C6C9A67F1488062100B25F2D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C6C9A6811488062100B25F2D /* BreckenridgeTests.h */ = {isa = PBXFileReference; path = BreckenridgeTests.h; sourceTree = "<group>"; };
+		C6C9A6811488062100B25F2D /* BreckenridgeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreckenridgeTests.h; sourceTree = "<group>"; };
 		C6C9A6821488062200B25F2D /* BreckenridgeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreckenridgeTests.m; sourceTree = "<group>"; };
+		C6C9A6A514880AE800B25F2D /* NMKongiRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMKongiRecognizer.h; sourceTree = "<group>"; };
+		C6C9A6A614880AE800B25F2D /* NMKongiRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMKongiRecognizer.m; sourceTree = "<group>"; };
+		C6C9A6AB14880FAF00B25F2D /* NMKongiRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMKongiRecognizer.h; sourceTree = "<group>"; };
+		C6C9A6AC14880FAF00B25F2D /* NMKongiRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMKongiRecognizer.m; sourceTree = "<group>"; };
+		C6C9A6B01488162500B25F2D /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = ThirdParty/TestFlightSDK0.8.1/libTestFlight.a; sourceTree = "<group>"; };
+		C6C9A6B11488162500B25F2D /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = ThirdParty/TestFlightSDK0.8.1/TestFlight.h; sourceTree = "<group>"; };
+		C6C9A6B61488176400B25F2D /* CheckPointNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckPointNames.h; path = ThirdParty/TestFlightSDK0.8.1/CheckPointNames.h; sourceTree = "<group>"; };
+		C6C9A6B71488199900B25F2D /* ShareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShareKit.xcodeproj; path = Breckenridge/ThirdParty/ShareKit/ShareKit.xcodeproj; sourceTree = "<group>"; };
+		C6C9A76F148959A400B25F2D /* NMSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSetupViewController.h; sourceTree = "<group>"; };
+		C6C9A770148959A400B25F2D /* NMSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSetupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +90,7 @@
 				C6C9A6521488062100B25F2D /* UIKit.framework in Frameworks */,
 				C6C9A6541488062100B25F2D /* Foundation.framework in Frameworks */,
 				C6C9A6561488062100B25F2D /* CoreGraphics.framework in Frameworks */,
+				C6C9A6B21488162500B25F2D /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +129,7 @@
 		C6C9A6501488062100B25F2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6C9A6B71488199900B25F2D /* ShareKit.xcodeproj */,
 				C6C9A6511488062100B25F2D /* UIKit.framework */,
 				C6C9A6531488062100B25F2D /* Foundation.framework */,
 				C6C9A6551488062100B25F2D /* CoreGraphics.framework */,
@@ -117,6 +141,10 @@
 		C6C9A6571488062100B25F2D /* Breckenridge */ = {
 			isa = PBXGroup;
 			children = (
+				C6C9A6AE1488160600B25F2D /* ThirdParty */,
+				C6C9A6AA14880D5800B25F2D /* Views */,
+				C6C9A6A914880D4F00B25F2D /* Controllers */,
+				C6C9A6A814880C6800B25F2D /* Models */,
 				C6C9A6601488062100B25F2D /* NMAppDelegate.h */,
 				C6C9A6611488062100B25F2D /* NMAppDelegate.m */,
 				C6C9A6631488062100B25F2D /* NMRootViewController.h */,
@@ -127,6 +155,8 @@
 				C6C9A66A1488062100B25F2D /* NMModelController.m */,
 				C6C9A66C1488062100B25F2D /* MainStoryboard.storyboard */,
 				C6C9A6581488062100B25F2D /* Supporting Files */,
+				C6C9A76F148959A400B25F2D /* NMSetupViewController.h */,
+				C6C9A770148959A400B25F2D /* NMSetupViewController.m */,
 			);
 			path = Breckenridge;
 			sourceTree = "<group>";
@@ -148,6 +178,8 @@
 				C6C9A6811488062100B25F2D /* BreckenridgeTests.h */,
 				C6C9A6821488062200B25F2D /* BreckenridgeTests.m */,
 				C6C9A67C1488062100B25F2D /* Supporting Files */,
+				C6C9A6A514880AE800B25F2D /* NMKongiRecognizer.h */,
+				C6C9A6A614880AE800B25F2D /* NMKongiRecognizer.m */,
 			);
 			path = BreckenridgeTests;
 			sourceTree = "<group>";
@@ -159,6 +191,55 @@
 				C6C9A67E1488062100B25F2D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6C9A6A814880C6800B25F2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C6C9A6A914880D4F00B25F2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6C9A6AB14880FAF00B25F2D /* NMKongiRecognizer.h */,
+				C6C9A6AC14880FAF00B25F2D /* NMKongiRecognizer.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C6C9A6AA14880D5800B25F2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C6C9A6AE1488160600B25F2D /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				C6C9A6AF1488161300B25F2D /* TestFlight */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		C6C9A6AF1488161300B25F2D /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				C6C9A6B01488162500B25F2D /* libTestFlight.a */,
+				C6C9A6B11488162500B25F2D /* TestFlight.h */,
+				C6C9A6B61488176400B25F2D /* CheckPointNames.h */,
+			);
+			name = TestFlight;
+			sourceTree = "<group>";
+		};
+		C6C9A6B81488199900B25F2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6C9A6C01488199A00B25F2D /* ShareKit.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +288,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Nomad Apps, LLC";
 			};
 			buildConfigurationList = C6C9A6471488062100B25F2D /* Build configuration list for PBXProject "Breckenridge" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -218,6 +300,12 @@
 			mainGroup = C6C9A6421488062100B25F2D;
 			productRefGroup = C6C9A64E1488062100B25F2D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C6C9A6B81488199900B25F2D /* Products */;
+					ProjectRef = C6C9A6B71488199900B25F2D /* ShareKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C6C9A64C1488062100B25F2D /* Breckenridge */,
@@ -225,6 +313,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C6C9A6C01488199A00B25F2D /* ShareKit.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ShareKit.app;
+			remoteRef = C6C9A6BF1488199A00B25F2D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C6C9A64B1488062100B25F2D /* Resources */ = {
@@ -272,6 +370,8 @@
 				C6C9A6651488062100B25F2D /* NMRootViewController.m in Sources */,
 				C6C9A6681488062100B25F2D /* NMDataViewController.m in Sources */,
 				C6C9A66B1488062100B25F2D /* NMModelController.m in Sources */,
+				C6C9A6AD14880FAF00B25F2D /* NMKongiRecognizer.m in Sources */,
+				C6C9A771148959A400B25F2D /* NMSetupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +380,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6C9A6831488062200B25F2D /* BreckenridgeTests.m in Sources */,
+				C6C9A6A714880AE800B25F2D /* NMKongiRecognizer.m in Sources */,
+				C6C9A772148959A400B25F2D /* NMSetupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,8 +473,18 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					ThirdParty/TestFlightSDK0.8.1/,
+					ThirdParty/ShareKit/Classes/ShareKit,
+				);
 				INFOPLIST_FILE = "Breckenridge/Breckenridge-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit\"",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/  \"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit/Classes/ShareKit/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -382,8 +494,18 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					ThirdParty/TestFlightSDK0.8.1/,
+					ThirdParty/ShareKit/Classes/ShareKit,
+				);
 				INFOPLIST_FILE = "Breckenridge/Breckenridge-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit\"",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/  \"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit/Classes/ShareKit/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -422,6 +544,69 @@
 			};
 			name = Release;
 		};
+		C6C9A6B31488171E00B25F2D /* Ad Hoc Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = "Ad Hoc Dev";
+		};
+		C6C9A6B41488171E00B25F2D /* Ad Hoc Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					ThirdParty/TestFlightSDK0.8.1/,
+					ThirdParty/ShareKit/Classes/ShareKit,
+				);
+				INFOPLIST_FILE = "Breckenridge/Breckenridge-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit\"",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/  \"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit/Classes/ShareKit/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad Hoc Dev";
+		};
+		C6C9A6B51488171E00B25F2D /* Ad Hoc Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Breckenridge.app/Breckenridge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
+				INFOPLIST_FILE = "BreckenridgeTests/BreckenridgeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = "Ad Hoc Dev";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -429,6 +614,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C6C9A6841488062200B25F2D /* Debug */,
+				C6C9A6B31488171E00B25F2D /* Ad Hoc Dev */,
 				C6C9A6851488062200B25F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -438,6 +624,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C6C9A6871488062200B25F2D /* Debug */,
+				C6C9A6B41488171E00B25F2D /* Ad Hoc Dev */,
 				C6C9A6881488062200B25F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -446,6 +633,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C6C9A68A1488062200B25F2D /* Debug */,
+				C6C9A6B51488171E00B25F2D /* Ad Hoc Dev */,
 				C6C9A68B1488062200B25F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

@@ -6,9 +6,5 @@
 //  Copyright (c) 2011 Nomad Apps, LLC. All rights reserved.
 //
 
-#ifndef Breckenridge_Header_h
-#define Breckenridge_Header_h
 
-
-
-#endif
+#define KONGI_VIEW_DID_APPEAR @"Kongi view did appear"

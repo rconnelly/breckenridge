@@ -12,3 +12,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#import "TestFlight.h"
+#import "CheckPointNames.h"

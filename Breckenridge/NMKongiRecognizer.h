@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NMKongiRecognizer : NSObject
+
+
+@interface NMKongiRecognizerDelegate : NSObject<UIGestureRecognizerDelegate> 
+
+@end
+
+
+@interface NMKongiRecognizer : UIGestureRecognizer
+@property (nonatomic, weak) NMKongiRecognizerDelegate *delegate;
 
 @end
