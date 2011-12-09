@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface NMDataViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) id dataObject;
+
 @end

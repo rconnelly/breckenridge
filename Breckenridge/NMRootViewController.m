@@ -12,14 +12,9 @@
 
 #import "NMDataViewController.h"
 
-@interface NMRootViewController ()
-@property (readonly, strong, nonatomic) NMModelController *modelController;
-@end
 
 @implementation NMRootViewController
-
-@synthesize pageViewController = _pageViewController;
-@synthesize modelController = _modelController;
+@synthesize mainTabBarController;
 
 - (void)didReceiveMemoryWarning
 {
@@ -29,9 +24,13 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
+- (void) viewDidLoad
 {
     [super viewDidLoad];
+    
+    mainTabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBarController"];
+    self.mainTabBarController.view.frame = self.view.bounds;
+    [self.view addSubview:self.mainTabBarController.view];
 }
 
 - (void)viewDidUnload
@@ -67,36 +66,5 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (NMModelController *)modelController
-{
-    /*
-     Return the model controller object, creating it if necessary.
-     In more complex implementations, the model controller may be passed to the view controller.
-     */
-    if (!_modelController) {
-        _modelController = [[NMModelController alloc] init];
-    }
-    return _modelController;
-}
-
-#pragma mark - UIPageViewController delegate methods
-
-/*
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
-{
-    
-}
- */
-
-- (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation
-{
-    // Set the spine position to "min" and the page view controller's view controllers array to contain just one view controller. Setting the spine position to 'UIPageViewControllerSpineLocationMid' in landscape orientation sets the doubleSided property to YES, so set it to NO here.
-    UIViewController *currentViewController = [self.pageViewController.viewControllers objectAtIndex:0];
-    NSArray *viewControllers = [NSArray arrayWithObject:currentViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:NULL];
-
-    self.pageViewController.doubleSided = NO;
-    return UIPageViewControllerSpineLocationMin;
-}
 
 @end

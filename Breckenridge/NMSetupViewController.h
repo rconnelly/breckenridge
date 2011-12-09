@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class NMGestureViewController;
 
 @interface NMSetupViewController : UIViewController
+
+@property (strong, nonatomic) NMGestureViewController *gestureViewController;
+@property (weak, nonatomic) IBOutlet UIView *gestureParentView;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @end

@@ -7,8 +7,12 @@
 //
 
 #import "NMSetupViewController.h"
+#import "NMGestureViewController.h"
 
 @implementation NMSetupViewController
+@synthesize gestureViewController;
+@synthesize gestureParentView;
+@synthesize saveButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,30 +36,20 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+    gestureViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GestureViewController"];
+    [self.gestureParentView addSubview:self.gestureViewController.view];
     
-    // Do any additional setup after loading the view, typically from a nib.
-    // Configure the page view controller and add it as a child view controller.
-    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    self.pageViewController.delegate = self;
+    gestureViewController.view.frame = self.gestureParentView.bounds;
     
-    NMDataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
-    NSArray *viewControllers = [NSArray arrayWithObject:startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
     
-    self.pageViewController.dataSource = self.modelController;
+    UIImage *greenButtonImage = [UIImage imageNamed:@"greenButton.png"];
+    UIImage *stretchableGreenButton = [greenButtonImage stretchableImageWithLeftCapWidth:12 topCapHeight:0];
+    [self.saveButton setBackgroundImage:stretchableGreenButton forState:UIControlStateNormal];
     
-    [self addChildViewController:self.pageViewController];
-    [self.view addSubview:self.pageViewController.view];
-    
-    // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
-    CGRect pageViewRect = self.view.bounds;
-    self.pageViewController.view.frame = pageViewRect;
-    
-    [self.pageViewController didMoveToParentViewController:self];    
-    
-    // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
-    self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
-
+    UIImage *darkGreenButtonImage = [UIImage imageNamed:@"greenButtonActivated.png"];
+    UIImage *stretchabledarkGreenButton = [darkGreenButtonImage stretchableImageWithLeftCapWidth:12 topCapHeight:0];
+    [self.saveButton setBackgroundImage:stretchabledarkGreenButton forState:UIControlStateHighlighted];
+    self.saveButton.titleLabel.textColor = [UIColor whiteColor];
 }
 
 /*
@@ -75,6 +69,8 @@
 
 - (void)viewDidUnload
 {
+    [self setGestureParentView:nil];
+    [self setSaveButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

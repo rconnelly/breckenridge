@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NMRootViewController : UIViewController <UIPageViewControllerDelegate>
+@interface NMRootViewController : UIViewController
 
-@property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) UITabBarController *mainTabBarController;
 
 @end

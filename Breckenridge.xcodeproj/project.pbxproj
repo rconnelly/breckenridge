@@ -27,6 +27,24 @@
 		C6C9A6B21488162500B25F2D /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C9A6B01488162500B25F2D /* libTestFlight.a */; };
 		C6C9A771148959A400B25F2D /* NMSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A770148959A400B25F2D /* NMSetupViewController.m */; };
 		C6C9A772148959A400B25F2D /* NMSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A770148959A400B25F2D /* NMSetupViewController.m */; };
+		C6F88BAE14927EB5003322C5 /* NMGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BAD14927EB5003322C5 /* NMGestureViewController.m */; };
+		C6F88BBD149285F3003322C5 /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BB1149285F3003322C5 /* greenButton.png */; };
+		C6F88BBE149285F3003322C5 /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BB2149285F3003322C5 /* greenButton@2x.png */; };
+		C6F88BBF149285F3003322C5 /* greenButtonActivated.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BB3149285F3003322C5 /* greenButtonActivated.png */; };
+		C6F88BC0149285F3003322C5 /* greenButtonActivated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BB4149285F3003322C5 /* greenButtonActivated@2x.png */; };
+		C6F88BC1149285F3003322C5 /* redButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BB5149285F3003322C5 /* redButton.png */; };
+		C6F88BC2149285F3003322C5 /* redButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BB6149285F3003322C5 /* redButton@2x.png */; };
+		C6F88BC3149285F3003322C5 /* redButtonActivated.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BB7149285F3003322C5 /* redButtonActivated.png */; };
+		C6F88BC4149285F3003322C5 /* redButtonActivated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BB8149285F3003322C5 /* redButtonActivated@2x.png */; };
+		C6F88BC5149285F3003322C5 /* yellowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BB9149285F3003322C5 /* yellowButton.png */; };
+		C6F88BC6149285F3003322C5 /* yellowButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BBA149285F3003322C5 /* yellowButton@2x.png */; };
+		C6F88BC7149285F3003322C5 /* yellowButtonActivated.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BBB149285F3003322C5 /* yellowButtonActivated.png */; };
+		C6F88BC8149285F3003322C5 /* yellowButtonActivated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BBC149285F3003322C5 /* yellowButtonActivated@2x.png */; };
+		C6F88BCB14928657003322C5 /* NMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BCA14928657003322C5 /* NMButton.m */; };
+		C6F88BD214928BC3003322C5 /* NMGestureDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BD114928BC3003322C5 /* NMGestureDrawView.m */; };
+		C6F88BD714928D0B003322C5 /* UIColor+NM.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BD614928D0B003322C5 /* UIColor+NM.m */; };
+		C6F88BD914928F06003322C5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F88BD814928F06003322C5 /* QuartzCore.framework */; };
+		C6F88BDB14928F22003322C5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F88BDA14928F22003322C5 /* OpenGLES.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +98,29 @@
 		C6C9A6B71488199900B25F2D /* ShareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShareKit.xcodeproj; path = Breckenridge/ThirdParty/ShareKit/ShareKit.xcodeproj; sourceTree = "<group>"; };
 		C6C9A76F148959A400B25F2D /* NMSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSetupViewController.h; sourceTree = "<group>"; };
 		C6C9A770148959A400B25F2D /* NMSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSetupViewController.m; sourceTree = "<group>"; };
+		C6F88BAC14927EB5003322C5 /* NMGestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMGestureViewController.h; sourceTree = "<group>"; };
+		C6F88BAD14927EB5003322C5 /* NMGestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMGestureViewController.m; sourceTree = "<group>"; };
+		C6F88BB1149285F3003322C5 /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
+		C6F88BB2149285F3003322C5 /* greenButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButton@2x.png"; sourceTree = "<group>"; };
+		C6F88BB3149285F3003322C5 /* greenButtonActivated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButtonActivated.png; sourceTree = "<group>"; };
+		C6F88BB4149285F3003322C5 /* greenButtonActivated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButtonActivated@2x.png"; sourceTree = "<group>"; };
+		C6F88BB5149285F3003322C5 /* redButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButton.png; sourceTree = "<group>"; };
+		C6F88BB6149285F3003322C5 /* redButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redButton@2x.png"; sourceTree = "<group>"; };
+		C6F88BB7149285F3003322C5 /* redButtonActivated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButtonActivated.png; sourceTree = "<group>"; };
+		C6F88BB8149285F3003322C5 /* redButtonActivated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redButtonActivated@2x.png"; sourceTree = "<group>"; };
+		C6F88BB9149285F3003322C5 /* yellowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowButton.png; sourceTree = "<group>"; };
+		C6F88BBA149285F3003322C5 /* yellowButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowButton@2x.png"; sourceTree = "<group>"; };
+		C6F88BBB149285F3003322C5 /* yellowButtonActivated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowButtonActivated.png; sourceTree = "<group>"; };
+		C6F88BBC149285F3003322C5 /* yellowButtonActivated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowButtonActivated@2x.png"; sourceTree = "<group>"; };
+		C6F88BC914928657003322C5 /* NMButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMButton.h; sourceTree = "<group>"; };
+		C6F88BCA14928657003322C5 /* NMButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMButton.m; sourceTree = "<group>"; };
+		C6F88BD014928BC3003322C5 /* NMGestureDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMGestureDrawView.h; sourceTree = "<group>"; };
+		C6F88BD114928BC3003322C5 /* NMGestureDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMGestureDrawView.m; sourceTree = "<group>"; };
+		C6F88BD314928CC5003322C5 /* NMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMConstants.h; sourceTree = "<group>"; };
+		C6F88BD514928D0B003322C5 /* UIColor+NM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NM.h"; sourceTree = "<group>"; };
+		C6F88BD614928D0B003322C5 /* UIColor+NM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NM.m"; sourceTree = "<group>"; };
+		C6F88BD814928F06003322C5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C6F88BDA14928F22003322C5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F88BDB14928F22003322C5 /* OpenGLES.framework in Frameworks */,
+				C6F88BD914928F06003322C5 /* QuartzCore.framework in Frameworks */,
 				C6C9A6521488062100B25F2D /* UIKit.framework in Frameworks */,
 				C6C9A6541488062100B25F2D /* Foundation.framework in Frameworks */,
 				C6C9A6561488062100B25F2D /* CoreGraphics.framework in Frameworks */,
@@ -110,6 +153,8 @@
 		C6C9A6421488062100B25F2D = {
 			isa = PBXGroup;
 			children = (
+				C6F88BDA14928F22003322C5 /* OpenGLES.framework */,
+				C6F88BD814928F06003322C5 /* QuartzCore.framework */,
 				C6C9A6571488062100B25F2D /* Breckenridge */,
 				C6C9A67B1488062100B25F2D /* BreckenridgeTests */,
 				C6C9A6501488062100B25F2D /* Frameworks */,
@@ -141,6 +186,8 @@
 		C6C9A6571488062100B25F2D /* Breckenridge */ = {
 			isa = PBXGroup;
 			children = (
+				C6F88BD414928CEF003322C5 /* Categories */,
+				C6F88BAF149285F3003322C5 /* Images */,
 				C6C9A6AE1488160600B25F2D /* ThirdParty */,
 				C6C9A6AA14880D5800B25F2D /* Views */,
 				C6C9A6A914880D4F00B25F2D /* Controllers */,
@@ -153,10 +200,13 @@
 				C6C9A6671488062100B25F2D /* NMDataViewController.m */,
 				C6C9A6691488062100B25F2D /* NMModelController.h */,
 				C6C9A66A1488062100B25F2D /* NMModelController.m */,
-				C6C9A66C1488062100B25F2D /* MainStoryboard.storyboard */,
-				C6C9A6581488062100B25F2D /* Supporting Files */,
 				C6C9A76F148959A400B25F2D /* NMSetupViewController.h */,
 				C6C9A770148959A400B25F2D /* NMSetupViewController.m */,
+				C6F88BAC14927EB5003322C5 /* NMGestureViewController.h */,
+				C6F88BAD14927EB5003322C5 /* NMGestureViewController.m */,
+				C6C9A66C1488062100B25F2D /* MainStoryboard.storyboard */,
+				C6C9A6581488062100B25F2D /* Supporting Files */,
+				C6F88BD314928CC5003322C5 /* NMConstants.h */,
 			);
 			path = Breckenridge;
 			sourceTree = "<group>";
@@ -212,6 +262,10 @@
 		C6C9A6AA14880D5800B25F2D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C6F88BC914928657003322C5 /* NMButton.h */,
+				C6F88BCA14928657003322C5 /* NMButton.m */,
+				C6F88BD014928BC3003322C5 /* NMGestureDrawView.h */,
+				C6F88BD114928BC3003322C5 /* NMGestureDrawView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -240,6 +294,42 @@
 				C6C9A6C01488199A00B25F2D /* ShareKit.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C6F88BAF149285F3003322C5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C6F88BB0149285F3003322C5 /* Buttons */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		C6F88BB0149285F3003322C5 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				C6F88BB1149285F3003322C5 /* greenButton.png */,
+				C6F88BB2149285F3003322C5 /* greenButton@2x.png */,
+				C6F88BB3149285F3003322C5 /* greenButtonActivated.png */,
+				C6F88BB4149285F3003322C5 /* greenButtonActivated@2x.png */,
+				C6F88BB5149285F3003322C5 /* redButton.png */,
+				C6F88BB6149285F3003322C5 /* redButton@2x.png */,
+				C6F88BB7149285F3003322C5 /* redButtonActivated.png */,
+				C6F88BB8149285F3003322C5 /* redButtonActivated@2x.png */,
+				C6F88BB9149285F3003322C5 /* yellowButton.png */,
+				C6F88BBA149285F3003322C5 /* yellowButton@2x.png */,
+				C6F88BBB149285F3003322C5 /* yellowButtonActivated.png */,
+				C6F88BBC149285F3003322C5 /* yellowButtonActivated@2x.png */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		C6F88BD414928CEF003322C5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C6F88BD514928D0B003322C5 /* UIColor+NM.h */,
+				C6F88BD614928D0B003322C5 /* UIColor+NM.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +421,18 @@
 			files = (
 				C6C9A65C1488062100B25F2D /* InfoPlist.strings in Resources */,
 				C6C9A66E1488062100B25F2D /* MainStoryboard.storyboard in Resources */,
+				C6F88BBD149285F3003322C5 /* greenButton.png in Resources */,
+				C6F88BBE149285F3003322C5 /* greenButton@2x.png in Resources */,
+				C6F88BBF149285F3003322C5 /* greenButtonActivated.png in Resources */,
+				C6F88BC0149285F3003322C5 /* greenButtonActivated@2x.png in Resources */,
+				C6F88BC1149285F3003322C5 /* redButton.png in Resources */,
+				C6F88BC2149285F3003322C5 /* redButton@2x.png in Resources */,
+				C6F88BC3149285F3003322C5 /* redButtonActivated.png in Resources */,
+				C6F88BC4149285F3003322C5 /* redButtonActivated@2x.png in Resources */,
+				C6F88BC5149285F3003322C5 /* yellowButton.png in Resources */,
+				C6F88BC6149285F3003322C5 /* yellowButton@2x.png in Resources */,
+				C6F88BC7149285F3003322C5 /* yellowButtonActivated.png in Resources */,
+				C6F88BC8149285F3003322C5 /* yellowButtonActivated@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +474,10 @@
 				C6C9A66B1488062100B25F2D /* NMModelController.m in Sources */,
 				C6C9A6AD14880FAF00B25F2D /* NMKongiRecognizer.m in Sources */,
 				C6C9A771148959A400B25F2D /* NMSetupViewController.m in Sources */,
+				C6F88BAE14927EB5003322C5 /* NMGestureViewController.m in Sources */,
+				C6F88BCB14928657003322C5 /* NMButton.m in Sources */,
+				C6F88BD214928BC3003322C5 /* NMGestureDrawView.m in Sources */,
+				C6F88BD714928D0B003322C5 /* UIColor+NM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,18 +579,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					ThirdParty/TestFlightSDK0.8.1/,
-					ThirdParty/ShareKit/Classes/ShareKit,
-				);
+				HEADER_SEARCH_PATHS = ThirdParty/TestFlightSDK0.8.1/;
 				INFOPLIST_FILE = "Breckenridge/Breckenridge-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit\"",
 					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/  \"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit/Classes/ShareKit/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -494,18 +596,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					ThirdParty/TestFlightSDK0.8.1/,
-					ThirdParty/ShareKit/Classes/ShareKit,
-				);
+				HEADER_SEARCH_PATHS = ThirdParty/TestFlightSDK0.8.1/;
 				INFOPLIST_FILE = "Breckenridge/Breckenridge-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit\"",
 					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/  \"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit/Classes/ShareKit/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -574,18 +672,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					ThirdParty/TestFlightSDK0.8.1/,
-					ThirdParty/ShareKit/Classes/ShareKit,
-				);
+				HEADER_SEARCH_PATHS = ThirdParty/TestFlightSDK0.8.1/;
 				INFOPLIST_FILE = "Breckenridge/Breckenridge-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit\"",
 					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/  \"$(SRCROOT)/Breckenridge/ThirdParty/ShareKit/Classes/ShareKit/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Ad Hoc Dev";
@@ -628,6 +722,7 @@
 				C6C9A6881488062200B25F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6C9A6891488062200B25F2D /* Build configuration list for PBXNativeTarget "BreckenridgeTests" */ = {
 			isa = XCConfigurationList;
@@ -637,6 +732,7 @@
 				C6C9A68B1488062200B25F2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
