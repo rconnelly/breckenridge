@@ -79,7 +79,16 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [textField resignFirstResponder];
+    if(textField == self.itemNameTextfield)
+    {
+        [self.itemAbbreviationTextField becomeFirstResponder];
+    }
+    else
+    {
+        [textField resignFirstResponder];
+        if(self.itemNameTextfield.text.length > 0)
+            [self addItem:textField];
+    }
     return NO;
 }
 
@@ -94,6 +103,7 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [textFieldFirstResponder resignFirstResponder];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -124,8 +134,8 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [self.items removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
         rowCount--;
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationRight];
     }  
     else if(editingStyle == UITableViewCellEditingStyleInsert)
     {
@@ -140,9 +150,9 @@
     item.abbreviation = self.itemAbbreviationTextField.text;
     [self.items addObject:item];
     NSArray *indexes = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:self.items.count-1 inSection:0]];
-  //  [self.listTableView insertRowsAtIndexPaths:indexes withRowAnimation:UITableViewRowAnimationAutomatic];
-    rowCount++;
-    [self.listTableView reloadData];
+        rowCount++;
+    [self.listTableView insertRowsAtIndexPaths:indexes withRowAnimation:UITableViewRowAnimationLeft];
+  //  [self.listTableView reloadData];
     self.itemNameTextfield.text = nil;
     self.itemAbbreviationTextField.text = nil;
     [self.itemNameTextfield resignFirstResponder];
