@@ -3,7 +3,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #define kMaxPoints 10000
-#define kLineWidth 2`
+#define kLineWidth 2
 
 @implementation NMPoint
 @synthesize dataPoint;
@@ -41,9 +41,14 @@
 - (id)initWithCoder:(NSCoder *)aCoder
 {
 	self = [super initWithCoder:aCoder];
-    self.backgroundColor = [UIColor clearColor];
+    //åself.backgroundColor = [UIColor clearColor];
     self.gesture = [[NMGesture alloc] init];
-	return self;
+	
+    self.layer.borderColor = [UIColor grayColor].CGColor;
+    self.layer.borderWidth = 1.0f;
+    self.layer.cornerRadius = 8.0f;
+    
+    return self;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -78,9 +83,9 @@
         [delegate didEndDrawGesture:self.gesture];
     }
     
-    [self performBlock:^{
+    //[self performBlock:^{
         [self clear];
-    } afterDelay:.3];
+    //} afterDelay:.1];
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event

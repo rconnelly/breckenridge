@@ -25,8 +25,8 @@
 		C6C9A6A714880AE800B25F2D /* NMKongiRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A6A614880AE800B25F2D /* NMKongiRecognizer.m */; };
 		C6C9A6AD14880FAF00B25F2D /* NMKongiRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A6AC14880FAF00B25F2D /* NMKongiRecognizer.m */; };
 		C6C9A6B21488162500B25F2D /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C9A6B01488162500B25F2D /* libTestFlight.a */; };
-		C6C9A771148959A400B25F2D /* NMSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A770148959A400B25F2D /* NMSetupViewController.m */; };
-		C6C9A772148959A400B25F2D /* NMSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A770148959A400B25F2D /* NMSetupViewController.m */; };
+		C6C9A771148959A400B25F2D /* NMGlyphSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A770148959A400B25F2D /* NMGlyphSearchViewController.m */; };
+		C6C9A772148959A400B25F2D /* NMGlyphSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A770148959A400B25F2D /* NMGlyphSearchViewController.m */; };
 		C6F88BAE14927EB5003322C5 /* NMGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BAD14927EB5003322C5 /* NMGestureViewController.m */; };
 		C6F88BBD149285F3003322C5 /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BB1149285F3003322C5 /* greenButton.png */; };
 		C6F88BBE149285F3003322C5 /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F88BB2149285F3003322C5 /* greenButton@2x.png */; };
@@ -46,6 +46,8 @@
 		C6F88BD914928F06003322C5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F88BD814928F06003322C5 /* QuartzCore.framework */; };
 		C6F88BDB14928F22003322C5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F88BDA14928F22003322C5 /* OpenGLES.framework */; };
 		C6F88BF714929F61003322C5 /* NSObject+NM.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BF614929F61003322C5 /* NSObject+NM.m */; };
+		C6F88BFA1492C21B003322C5 /* NMSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BF91492C21A003322C5 /* NMSetupViewController.m */; };
+		C6F88BFD1492C4F7003322C5 /* NMItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BFC1492C4F7003322C5 /* NMItemModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C6C9A64D1488062100B25F2D /* Breckenridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breckenridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6C9A64D1488062100B25F2D /* GlyphList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlyphList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C9A6511488062100B25F2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6C9A6531488062100B25F2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C6C9A6551488062100B25F2D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,8 +99,8 @@
 		C6C9A6B11488162500B25F2D /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = ThirdParty/TestFlightSDK0.8.1/TestFlight.h; sourceTree = "<group>"; };
 		C6C9A6B61488176400B25F2D /* CheckPointNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckPointNames.h; path = ThirdParty/TestFlightSDK0.8.1/CheckPointNames.h; sourceTree = "<group>"; };
 		C6C9A6B71488199900B25F2D /* ShareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShareKit.xcodeproj; path = Breckenridge/ThirdParty/ShareKit/ShareKit.xcodeproj; sourceTree = "<group>"; };
-		C6C9A76F148959A400B25F2D /* NMSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSetupViewController.h; sourceTree = "<group>"; };
-		C6C9A770148959A400B25F2D /* NMSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSetupViewController.m; sourceTree = "<group>"; };
+		C6C9A76F148959A400B25F2D /* NMGlyphSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMGlyphSearchViewController.h; sourceTree = "<group>"; };
+		C6C9A770148959A400B25F2D /* NMGlyphSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMGlyphSearchViewController.m; sourceTree = "<group>"; };
 		C6F88BAC14927EB5003322C5 /* NMGestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMGestureViewController.h; sourceTree = "<group>"; };
 		C6F88BAD14927EB5003322C5 /* NMGestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMGestureViewController.m; sourceTree = "<group>"; };
 		C6F88BB1149285F3003322C5 /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
@@ -124,6 +126,10 @@
 		C6F88BDA14928F22003322C5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		C6F88BF514929F61003322C5 /* NSObject+NM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NM.h"; sourceTree = "<group>"; };
 		C6F88BF614929F61003322C5 /* NSObject+NM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NM.m"; sourceTree = "<group>"; };
+		C6F88BF81492C21A003322C5 /* NMSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSetupViewController.h; sourceTree = "<group>"; };
+		C6F88BF91492C21A003322C5 /* NMSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSetupViewController.m; sourceTree = "<group>"; };
+		C6F88BFB1492C4F7003322C5 /* NMItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMItemModel.h; sourceTree = "<group>"; };
+		C6F88BFC1492C4F7003322C5 /* NMItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMItemModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +174,7 @@
 		C6C9A64E1488062100B25F2D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C6C9A64D1488062100B25F2D /* Breckenridge.app */,
+				C6C9A64D1488062100B25F2D /* GlyphList.app */,
 				C6C9A6741488062100B25F2D /* BreckenridgeTests.octest */,
 			);
 			name = Products;
@@ -203,13 +209,15 @@
 				C6C9A6671488062100B25F2D /* NMDataViewController.m */,
 				C6C9A6691488062100B25F2D /* NMModelController.h */,
 				C6C9A66A1488062100B25F2D /* NMModelController.m */,
-				C6C9A76F148959A400B25F2D /* NMSetupViewController.h */,
-				C6C9A770148959A400B25F2D /* NMSetupViewController.m */,
+				C6C9A76F148959A400B25F2D /* NMGlyphSearchViewController.h */,
+				C6C9A770148959A400B25F2D /* NMGlyphSearchViewController.m */,
 				C6F88BAC14927EB5003322C5 /* NMGestureViewController.h */,
 				C6F88BAD14927EB5003322C5 /* NMGestureViewController.m */,
 				C6C9A66C1488062100B25F2D /* MainStoryboard.storyboard */,
 				C6C9A6581488062100B25F2D /* Supporting Files */,
 				C6F88BD314928CC5003322C5 /* NMConstants.h */,
+				C6F88BF81492C21A003322C5 /* NMSetupViewController.h */,
+				C6F88BF91492C21A003322C5 /* NMSetupViewController.m */,
 			);
 			path = Breckenridge;
 			sourceTree = "<group>";
@@ -249,6 +257,8 @@
 		C6C9A6A814880C6800B25F2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C6F88BFB1492C4F7003322C5 /* NMItemModel.h */,
+				C6F88BFC1492C4F7003322C5 /* NMItemModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -354,7 +364,7 @@
 			);
 			name = Breckenridge;
 			productName = Breckenridge;
-			productReference = C6C9A64D1488062100B25F2D /* Breckenridge.app */;
+			productReference = C6C9A64D1488062100B25F2D /* GlyphList.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C6C9A6731488062100B25F2D /* BreckenridgeTests */ = {
@@ -478,12 +488,14 @@
 				C6C9A6681488062100B25F2D /* NMDataViewController.m in Sources */,
 				C6C9A66B1488062100B25F2D /* NMModelController.m in Sources */,
 				C6C9A6AD14880FAF00B25F2D /* NMKongiRecognizer.m in Sources */,
-				C6C9A771148959A400B25F2D /* NMSetupViewController.m in Sources */,
+				C6C9A771148959A400B25F2D /* NMGlyphSearchViewController.m in Sources */,
 				C6F88BAE14927EB5003322C5 /* NMGestureViewController.m in Sources */,
 				C6F88BCB14928657003322C5 /* NMButton.m in Sources */,
 				C6F88BD214928BC3003322C5 /* NMGestureDrawView.m in Sources */,
 				C6F88BD714928D0B003322C5 /* UIColor+NM.m in Sources */,
 				C6F88BF714929F61003322C5 /* NSObject+NM.m in Sources */,
+				C6F88BFA1492C21B003322C5 /* NMSetupViewController.m in Sources */,
+				C6F88BFD1492C4F7003322C5 /* NMItemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +505,7 @@
 			files = (
 				C6C9A6831488062200B25F2D /* BreckenridgeTests.m in Sources */,
 				C6C9A6A714880AE800B25F2D /* NMKongiRecognizer.m in Sources */,
-				C6C9A772148959A400B25F2D /* NMSetupViewController.m in Sources */,
+				C6C9A772148959A400B25F2D /* NMGlyphSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,7 +603,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GlyphList;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -600,6 +612,7 @@
 		C6C9A6881488062200B25F2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
 				HEADER_SEARCH_PATHS = ThirdParty/TestFlightSDK0.8.1/;
@@ -608,7 +621,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GlyphList;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -676,6 +690,7 @@
 		C6C9A6B41488171E00B25F2D /* Ad Hoc Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
 				HEADER_SEARCH_PATHS = ThirdParty/TestFlightSDK0.8.1/;
@@ -684,7 +699,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GlyphList;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/\"/**";
 				WRAPPER_EXTENSION = app;
 			};

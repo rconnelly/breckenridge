@@ -2,17 +2,19 @@
 //  NMSetupViewController.m
 //  Breckenridge
 //
-//  Created by Ryan Connelly on 12/2/11.
+//  Created by Ryan Connelly on 12/9/11.
 //  Copyright (c) 2011 Nomad Apps, LLC. All rights reserved.
 //
 
 #import "NMSetupViewController.h"
-#import "NMGestureViewController.h"
+#import "NMItemModel.h"
 
 @implementation NMSetupViewController
-@synthesize gestureViewController;
-@synthesize gestureParentView;
-@synthesize saveButton;
+@synthesize addButton;
+@synthesize listTableView;
+@synthesize items;
+@synthesize itemNameTextfield;
+@synthesize itemAbbreviationTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,24 +35,31 @@
 
 #pragma mark - View lifecycle
 
-- (void) viewDidLoad
+/*
+// Implement loadView to create a view hierarchy programmatically, without using a nib.
+- (void)loadView
+{
+}
+*/
+
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad
 {
     [super viewDidLoad];
-    gestureViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GestureViewController"];
-    [self.gestureParentView addSubview:self.gestureViewController.view];
-    
-    gestureViewController.view.frame = self.gestureParentView.bounds;
-    NMGestureDrawView *gdv = (NMGestureDrawView *)gestureViewController.view;
-    gdv.delegate = self;
-    
-    UIImage *greenButtonImage = [UIImage imageNamed:@"greenButton.png"];
-    UIImage *stretchableGreenButton = [greenButtonImage stretchableImageWithLeftCapWidth:12 topCapHeight:0];
-    [self.saveButton setBackgroundImage:stretchableGreenButton forState:UIControlStateNormal];
-    
-    UIImage *darkGreenButtonImage = [UIImage imageNamed:@"greenButtonActivated.png"];
-    UIImage *stretchabledarkGreenButton = [darkGreenButtonImage stretchableImageWithLeftCapWidth:12 topCapHeight:0];
-    [self.saveButton setBackgroundImage:stretchabledarkGreenButton forState:UIControlStateHighlighted];
-    self.saveButton.titleLabel.textColor = [UIColor whiteColor];
+    items = [NSMutableArray array];
+    rowCount = items.count;
+}
+
+- (void)viewDidUnload
+{
+    [self setAddButton:nil];
+    [self setListTableView:nil];
+    [self setItemNameTextfield:nil];
+    [self setItemAbbreviationTextField:nil];
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -60,17 +69,6 @@
     textFieldFirstResponder = nil;
 }
 
-- (void) didEndDrawGesture:(NMGesture *)gesture
-{
-    
-}
-
-- (void) didBeginDrawGesture:(NMGesture *)gesture
-{
-    if([textFieldFirstResponder isFirstResponder])
-        [textFieldFirstResponder resignFirstResponder];
-    textFieldFirstResponder = nil;
-}
 
 #pragma mark - UITextFieldDelegate
 
@@ -85,34 +83,70 @@
     return NO;
 }
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
-
-- (void)viewDidUnload
-{
-    [self setGestureParentView:nil];
-    [self setSaveButton:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - UITableViewDataSource
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identifier = @"SetupViewTableCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.detailTextLabel.textColor = [UIColor grayColor];
+        cell.backgroundColor = [UIColor clearColor];
+    }
+    NMItemModel *item = [items objectAtIndex:indexPath.row];
+    cell.textLabel.text = item.name;
+    cell.detailTextLabel.text = item.abbreviation;
+    
+    return cell;
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return rowCount;
+}
+
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+ forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [self.items removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+        rowCount--;
+    }  
+    else if(editingStyle == UITableViewCellEditingStyleInsert)
+    {
+                
+    }
+}
+
+- (IBAction)addItem:(id)sender {
+    NMItemModel *item = [[NMItemModel alloc] init];
+    
+    item.name = self.itemNameTextfield.text;
+    item.abbreviation = self.itemAbbreviationTextField.text;
+    [self.items addObject:item];
+    NSArray *indexes = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:self.items.count-1 inSection:0]];
+  //  [self.listTableView insertRowsAtIndexPaths:indexes withRowAnimation:UITableViewRowAnimationAutomatic];
+    rowCount++;
+    [self.listTableView reloadData];
+    self.itemNameTextfield.text = nil;
+    self.itemAbbreviationTextField.text = nil;
+    [self.itemNameTextfield resignFirstResponder];
+    [self.itemAbbreviationTextField resignFirstResponder];
+    [self setEditing:NO];
+}
 @end
