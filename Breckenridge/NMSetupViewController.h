@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NMGestureDrawView.h"
 @class NMGestureViewController;
 
-@interface NMSetupViewController : UIViewController
-
+@interface NMSetupViewController : UIViewController <UITextFieldDelegate, NMGestureDrawViewDelegate>
+{
+    id textFieldFirstResponder;
+}
 @property (strong, nonatomic) NMGestureViewController *gestureViewController;
 @property (weak, nonatomic) IBOutlet UIView *gestureParentView;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;

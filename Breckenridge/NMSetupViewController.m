@@ -40,7 +40,8 @@
     [self.gestureParentView addSubview:self.gestureViewController.view];
     
     gestureViewController.view.frame = self.gestureParentView.bounds;
-    
+    NMGestureDrawView *gdv = (NMGestureDrawView *)gestureViewController.view;
+    gdv.delegate = self;
     
     UIImage *greenButtonImage = [UIImage imageNamed:@"greenButton.png"];
     UIImage *stretchableGreenButton = [greenButtonImage stretchableImageWithLeftCapWidth:12 topCapHeight:0];
@@ -50,6 +51,38 @@
     UIImage *stretchabledarkGreenButton = [darkGreenButtonImage stretchableImageWithLeftCapWidth:12 topCapHeight:0];
     [self.saveButton setBackgroundImage:stretchabledarkGreenButton forState:UIControlStateHighlighted];
     self.saveButton.titleLabel.textColor = [UIColor whiteColor];
+}
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if([textFieldFirstResponder isFirstResponder])
+        [textFieldFirstResponder resignFirstResponder];
+    textFieldFirstResponder = nil;
+}
+
+- (void) didEndDrawGesture:(NMGesture *)gesture
+{
+    
+}
+
+- (void) didBeginDrawGesture:(NMGesture *)gesture
+{
+    if([textFieldFirstResponder isFirstResponder])
+        [textFieldFirstResponder resignFirstResponder];
+    textFieldFirstResponder = nil;
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void) textFieldDidBeginEditing:(UITextField *)textField
+{
+    textFieldFirstResponder = textField;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
 }
 
 /*

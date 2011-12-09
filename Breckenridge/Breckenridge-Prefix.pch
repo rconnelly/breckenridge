@@ -11,7 +11,10 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-#endif
 
-#import "TestFlight.h"
-#import "CheckPointNames.h"
+
+    #import "TestFlight.h"
+    #import "CheckPointNames.h"
+    #import "NSObject+NM.h"
+
+#endif

@@ -45,6 +45,7 @@
 		C6F88BD714928D0B003322C5 /* UIColor+NM.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BD614928D0B003322C5 /* UIColor+NM.m */; };
 		C6F88BD914928F06003322C5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F88BD814928F06003322C5 /* QuartzCore.framework */; };
 		C6F88BDB14928F22003322C5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F88BDA14928F22003322C5 /* OpenGLES.framework */; };
+		C6F88BF714929F61003322C5 /* NSObject+NM.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BF614929F61003322C5 /* NSObject+NM.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,8 @@
 		C6F88BD614928D0B003322C5 /* UIColor+NM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NM.m"; sourceTree = "<group>"; };
 		C6F88BD814928F06003322C5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C6F88BDA14928F22003322C5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		C6F88BF514929F61003322C5 /* NSObject+NM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NM.h"; sourceTree = "<group>"; };
+		C6F88BF614929F61003322C5 /* NSObject+NM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NM.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +331,8 @@
 			children = (
 				C6F88BD514928D0B003322C5 /* UIColor+NM.h */,
 				C6F88BD614928D0B003322C5 /* UIColor+NM.m */,
+				C6F88BF514929F61003322C5 /* NSObject+NM.h */,
+				C6F88BF614929F61003322C5 /* NSObject+NM.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 				C6F88BCB14928657003322C5 /* NMButton.m in Sources */,
 				C6F88BD214928BC3003322C5 /* NMGestureDrawView.m in Sources */,
 				C6F88BD714928D0B003322C5 /* UIColor+NM.m in Sources */,
+				C6F88BF714929F61003322C5 /* NSObject+NM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -64,7 +64,7 @@
 // Called when receiving the "shake" notification; plays the erase sound and redraws the view
 -(void) eraseView
 {
-    [self.drawingView erase];
+    [self.drawingView clear];
 }
 
 
