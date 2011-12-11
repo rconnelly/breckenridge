@@ -1,0 +1,3 @@
+[submodule "Breckenridge/ThirdParty/MultistrokeGestureRecognizer-iOS"]
+	path = Breckenridge/ThirdParty/MultistrokeGestureRecognizer-iOS
+	url = git@github.com:rconnelly/MultistrokeGestureRecognizer-iOS.git

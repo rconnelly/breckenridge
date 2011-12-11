@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C6C9A64C1488062100B25F2D"
-               BuildableName = "Breckenridge.app"
+               BuildableName = "GlyphList.app"
                BlueprintName = "Breckenridge"
                ReferencedContainer = "container:Breckenridge.xcodeproj">
             </BuildableReference>
@@ -42,7 +42,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C6C9A64C1488062100B25F2D"
-            BuildableName = "Breckenridge.app"
+            BuildableName = "GlyphList.app"
             BlueprintName = "Breckenridge"
             ReferencedContainer = "container:Breckenridge.xcodeproj">
          </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C6C9A64C1488062100B25F2D"
-            BuildableName = "Breckenridge.app"
+            BuildableName = "GlyphList.app"
             BlueprintName = "Breckenridge"
             ReferencedContainer = "container:Breckenridge.xcodeproj">
          </BuildableReference>
@@ -79,7 +79,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C6C9A64C1488062100B25F2D"
-            BuildableName = "Breckenridge.app"
+            BuildableName = "GlyphList.app"
             BlueprintName = "Breckenridge"
             ReferencedContainer = "container:Breckenridge.xcodeproj">
          </BuildableReference>
