@@ -21,6 +21,8 @@
 // Smaller number reduces accuracy.
 #define MAX_GLYPH_SET 10
 
+#define MAX_PREDICATES 200
+
 @interface NMGlyphSearchViewController ()
 - (WTMGlyphDetector *) newGlyphDetector;
 - (NSArray *) findListItems:(NSArray *)searchPhrases;
@@ -65,7 +67,6 @@
     [super viewDidLoad];
     gestureViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GestureViewController"];
     [self.gestureParentView addSubview:self.gestureViewController.view];
-    
     gestureViewController.view.frame = self.gestureParentView.bounds;
     gdv = (NMGestureDrawView *)gestureViewController.view;
     gdv.delegate = self;
@@ -144,11 +145,13 @@
     
     if(existingSearchPhrases.count == 0)
     {
-        newSearchPhrases = [[glyphNames subarrayWithRange:NSMakeRange(0, MAX_SEARCH_PHRASES)] mutableCopy];
+        int maxSearchPhrases = MIN(MAX_SEARCH_PHRASES, glyphNames.count);
+        newSearchPhrases = [[glyphNames subarrayWithRange:NSMakeRange(0, maxSearchPhrases)] mutableCopy];
     }
     else
     {
-        [[glyphNames subarrayWithRange:NSMakeRange(0, MAX_GLYPH_SET)] enumerateObjectsUsingBlock:^(NSString *glyphName, NSUInteger idx, BOOL *stop) {
+        int maxGlyphSet = MIN(MAX_GLYPH_SET, glyphNames.count);
+        [[glyphNames subarrayWithRange:NSMakeRange(0, maxGlyphSet)] enumerateObjectsUsingBlock:^(NSString *glyphName, NSUInteger idx, BOOL *stop) {
             [existingSearchPhrases enumerateObjectsUsingBlock:^(NSMutableString *searchPhrase, NSUInteger idx, BOOL *stop) {
                 NSString *newPhrase = [NSString stringWithFormat:@"%@%@",searchPhrase,glyphName];
                 [newSearchPhrases addObject:newPhrase];
@@ -166,7 +169,8 @@
     
     NSMutableArray *subpredicates = [[NSMutableArray alloc] init];
     
-    for (NSString *phrase in sphrases) {
+    int maxPredicates = MIN(MAX_PREDICATES, sphrases.count);
+    for (NSString *phrase in [sphrases subarrayWithRange:NSMakeRange(0, maxPredicates)]) {
         NSPredicate *subpredicate = [NSPredicate predicateWithFormat:@"name BEGINSWITH[cd] %@",phrase];
         [subpredicates addObject:subpredicate];
     }
@@ -312,23 +316,24 @@
      }
 }
 
+
 - (void)addItem:(NMItemModel *)item {
     [[self listItems] addObject:item];
 }
 
 - (IBAction)gestureButtonTouched:(id)sender {
     self.gestureButton.hidden = YES;
-    self.gdv.hidden = NO;
     self.gestureLabel.hidden = NO;
-    self.gdv.superview.userInteractionEnabled = YES;
+    self.gestureParentView.userInteractionEnabled = YES;
+    self.gdv.hidden = NO;
 }
 
 - (void) didHide:(NMGestureDrawView *) drawView
 {
     self.gestureButton.hidden = NO;
     self.gestureLabel.hidden = YES;
-    self.gdv.superview.userInteractionEnabled = NO;
-    
+//    self.gestureParentView.hidden = NO;
+    self.gestureParentView.userInteractionEnabled = NO;
     self.searchPhrases = nil;
     [self.glyphDetector reset];
 }

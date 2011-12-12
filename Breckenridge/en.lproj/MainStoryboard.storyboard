@@ -49,7 +49,7 @@
                                 <rect key="frame" x="20" y="112" width="280" height="299"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ibB-0a-Sqe" id="1uB-Uh-EJb"/>
                                     <outlet property="delegate" destination="ibB-0a-Sqe" id="kz8-qQ-D2W"/>
@@ -89,13 +89,13 @@
                                 <rect key="frame" x="20" y="20" width="280" height="371"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="7dh-Qq-3WF" id="VwF-TK-Icq"/>
                                     <outlet property="delegate" destination="7dh-Qq-3WF" id="bim-NZ-fYA"/>
                                 </connections>
                             </tableView>
-                            <view alpha="0.50000000000000011" contentMode="scaleToFill" id="EW1-VM-WxO">
+                            <view contentMode="scaleToFill" id="EW1-VM-WxO">
                                 <rect key="frame" x="20" y="20" width="280" height="371"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -108,7 +108,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vP9-L6-RMy">
                                 <rect key="frame" x="290" y="8" width="24" height="24"/>
@@ -143,7 +143,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5LL-X3-0TL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="GestureViewController" id="AbA-li-7iO" userLabel="Gesture View Controller" customClass="NMGestureViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ceC-jU-Yve" customClass="NMGestureDrawView">
+                    <view key="view" alpha="0.79999999999999993" contentMode="scaleToFill" id="ceC-jU-Yve" customClass="NMGestureDrawView">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="266"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -163,7 +163,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
