@@ -9,6 +9,7 @@
 #import "NMGestureViewController.h"
 
 @implementation NMGestureViewController
+@synthesize exitButton;
 @synthesize drawingView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -47,6 +48,7 @@
 
 - (void)viewDidUnload
 {
+    [self setExitButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -67,5 +69,8 @@
     [self.drawingView clear];
 }
 
-
+- (IBAction)exitButtonTouched:(id)sender {
+    self.view.hidden = YES;
+    [(id)self.view didHide];
+}
 @end

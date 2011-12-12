@@ -8,29 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NMPoint : NSObject
-@property (nonatomic)CGPoint dataPoint;
-
-- (id) initWithPoint:(CGPoint)p;
-
-@end
 
 @interface NMGesture : NSObject
 @property (nonatomic, strong) NSMutableArray *points;
 
 @end
 
+@class NMGestureDrawView;
+
 
 @protocol NMGestureDrawViewDelegate <NSObject>
 - (void) didEndDrawGesture:(NMGesture *) gesture;
 - (void) didBeginDrawGesture:(NMGesture *) gesture;
+- (void) didAddPoint:(CGPoint) point;
+- (void) didHide:(NMGestureDrawView *) drawView;
 @end
 
 
 @interface NMGestureDrawView : UIView 
 @property (nonatomic, weak) IBOutlet id delegate;
 @property (nonatomic, strong) NMGesture *gesture;
-
+- (void) didHide;
 - (void)clear;
 
 @end

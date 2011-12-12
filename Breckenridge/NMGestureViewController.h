@@ -21,5 +21,7 @@
 
 
 @interface NMGestureViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *exitButton;
+- (IBAction)exitButtonTouched:(id)sender;
 @property (weak, nonatomic) NMGestureDrawView *drawingView;
 @end

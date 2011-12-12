@@ -8,11 +8,12 @@
 
 #import "NMSetupViewController.h"
 #import "NMItemModel.h"
+#import "NMAppDelegate.h"
 
 @implementation NMSetupViewController
+@synthesize noneLabel;
 @synthesize addButton;
 @synthesize listTableView;
-@synthesize items;
 @synthesize itemNameTextfield;
 @synthesize itemAbbreviationTextField;
 
@@ -41,14 +42,15 @@
 {
 }
 */
-
+- (NSMutableArray *) items
+{
+    return [(NMAppDelegate *)[[UIApplication sharedApplication] delegate] items];
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    items = [NSMutableArray array];
-    rowCount = items.count;
 }
 
 - (void)viewDidUnload
@@ -57,6 +59,7 @@
     [self setListTableView:nil];
     [self setItemNameTextfield:nil];
     [self setItemAbbreviationTextField:nil];
+    [self setNoneLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -116,7 +119,7 @@
         cell.detailTextLabel.textColor = [UIColor grayColor];
         cell.backgroundColor = [UIColor clearColor];
     }
-    NMItemModel *item = [items objectAtIndex:indexPath.row];
+    NMItemModel *item = [[self items] objectAtIndex:indexPath.row];
     cell.textLabel.text = item.name;
     cell.detailTextLabel.text = item.abbreviation;
     
@@ -125,7 +128,7 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return rowCount;
+    return [self items].count;
 }
 
 - (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
@@ -135,6 +138,8 @@
         // Delete the row from the data source
         [self.items removeObjectAtIndex:indexPath.row];
         rowCount--;
+        
+        noneLabel.hidden = rowCount != 0;
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationRight];
     }  
     else if(editingStyle == UITableViewCellEditingStyleInsert)
@@ -158,5 +163,7 @@
     [self.itemNameTextfield resignFirstResponder];
     [self.itemAbbreviationTextField resignFirstResponder];
     [self setEditing:NO];
+    
+    noneLabel.hidden = YES;
 }
 @end

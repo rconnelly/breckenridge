@@ -5,20 +5,6 @@
 #define kMaxPoints 10000
 #define kLineWidth 2
 
-@implementation NMPoint
-@synthesize dataPoint;
-
-- (id) initWithPoint:(CGPoint)p
-{
-    self = [super init];
-    if(self)
-    {
-        dataPoint = p;
-    }
-    return self;
-}
-
-@end
 
 @implementation NMGesture
 
@@ -61,7 +47,7 @@
     }
     
     CGPoint p = [touch locationInView:self];
-    [self.gesture.points addObject:[[NMPoint alloc] initWithPoint:p]];
+    [self.gesture.points addObject:[NSValue valueWithCGPoint:p]];
     [self setNeedsDisplay];
     
 }
@@ -70,7 +56,12 @@
 {
 	UITouch *touch = [touches anyObject];
 	CGPoint p = [touch locationInView:self];
-    [self.gesture.points addObject:[[NMPoint alloc] initWithPoint:p]];
+    [self.gesture.points addObject:[NSValue valueWithCGPoint:p]];
+
+    if ([delegate respondsToSelector:@selector(didAddPoint:)])
+    {
+        [delegate didAddPoint:p];
+    }
     
     [self setNeedsDisplay];
     //[self setNeedsDisplayInRect:CGRectMake(p.x - kLineWidth/2, p.y - kLineWidth/2, kLineWidth, kLineWidth)];
@@ -102,9 +93,17 @@
 - (void)addPoint:(CGPoint)point
 {
     if ([self.gesture.points count] < kMaxPoints) {
-        [self.gesture.points addObject:[[NMPoint alloc] initWithPoint:point]];
+        [self.gesture.points addObject:[NSValue valueWithCGPoint:point]];
         [self setNeedsDisplay];
         //[self setNeedsDisplayInRect:CGRectMake(point.x - kLineWidth/2, point.y - kLineWidth/2, kLineWidth, kLineWidth)];
+    }
+}
+
+- (void) didHide
+{
+    if ([delegate respondsToSelector:@selector(didHide:)])
+    {
+        [delegate didHide:self];
     }
 }
 
@@ -120,18 +119,18 @@
     CGContextSetAllowsAntialiasing(ctx, YES);
 //    CGContextBeginPath(ctx);
     __block CGPoint lastPoint;
-    [self.gesture.points enumerateObjectsUsingBlock:^(NMPoint *p, NSUInteger index, BOOL *stop) {
+    [self.gesture.points enumerateObjectsUsingBlock:^(NSValue *p, NSUInteger index, BOOL *stop) {
         if(index == 0)
         {
-			CGContextFillEllipseInRect(ctx, CGRectMake(p.dataPoint.x-kLineWidth/2, p.dataPoint.y-kLineWidth/2,
+			CGContextFillEllipseInRect(ctx, CGRectMake(p.CGPointValue.x-kLineWidth/2, p.CGPointValue.y-kLineWidth/2,
                                                        kLineWidth, kLineWidth));
-            lastPoint = p.dataPoint;
+            lastPoint = p.CGPointValue;
         }
         else
         {
             CGContextMoveToPoint(ctx, lastPoint.x, lastPoint.y);
-            CGContextAddLineToPoint(ctx, p.dataPoint.x, p.dataPoint.y);
-            lastPoint = p.dataPoint;
+            CGContextAddLineToPoint(ctx, p.CGPointValue.x, p.CGPointValue.y);
+            lastPoint = p.CGPointValue;
         }
     }];
     

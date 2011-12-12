@@ -46,7 +46,7 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Tj4-ii-Mpu">
-                                <rect key="frame" x="0.0" y="124" width="320" height="292"/>
+                                <rect key="frame" x="20" y="112" width="280" height="299"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -55,8 +55,8 @@
                                     <outlet property="delegate" destination="ibB-0a-Sqe" id="kz8-qQ-D2W"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="None" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="90L-2M-waz">
-                                <rect key="frame" x="81" y="244" width="158" height="52"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="No Items" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="90L-2M-waz">
+                                <rect key="frame" x="81" y="184" width="158" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
@@ -71,6 +71,7 @@
                         <outlet property="itemAbbreviationTextField" destination="82C-gg-aJY" id="1Lc-pD-FEl"/>
                         <outlet property="itemNameTextfield" destination="ySZ-Nw-XQe" id="HjS-zv-RkA"/>
                         <outlet property="listTableView" destination="Tj4-ii-Mpu" id="lJG-mX-eza"/>
+                        <outlet property="noneLabel" destination="90L-2M-waz" id="oz0-bf-QT2"/>
                     </connections>
                 </viewController>
             </objects>
@@ -84,14 +85,24 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="EW1-VM-WxO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XFm-YF-Dtj">
+                                <rect key="frame" x="20" y="20" width="280" height="371"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7dh-Qq-3WF" id="VwF-TK-Icq"/>
+                                    <outlet property="delegate" destination="7dh-Qq-3WF" id="bim-NZ-fYA"/>
+                                </connections>
+                            </tableView>
+                            <view alpha="0.50000000000000011" contentMode="scaleToFill" id="EW1-VM-WxO">
                                 <rect key="frame" x="20" y="20" width="280" height="371"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gesture" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="dKH-bi-jSe">
                                         <rect key="frame" x="61" y="166" width="158" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="0.53000000000000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -99,12 +110,30 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vP9-L6-RMy">
+                                <rect key="frame" x="290" y="8" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="G">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gestureButtonTouched:" destination="7dh-Qq-3WF" eventType="touchUpInside" id="WFA-Qe-7Pj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create List" id="ZEb-mW-xSx"/>
                     <connections>
+                        <outlet property="gestureButton" destination="vP9-L6-RMy" id="0qS-Cr-ywz"/>
+                        <outlet property="gestureLabel" destination="dKH-bi-jSe" id="xCb-yw-SFQ"/>
                         <outlet property="gestureParentView" destination="EW1-VM-WxO" id="FOd-2c-GT3"/>
+                        <outlet property="listTableView" destination="XFm-YF-Dtj" id="GSd-Eq-BZf"/>
                     </connections>
                 </viewController>
             </objects>
@@ -117,12 +146,32 @@
                     <view key="view" contentMode="scaleToFill" id="ceC-jU-Yve" customClass="NMGestureDrawView">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="266"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yvt-Fk-w6W">
+                                <rect key="frame" x="249" y="7" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButtonTouched:" destination="AbA-li-7iO" eventType="touchUpInside" id="e0r-V8-NRv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="exitButton" destination="yvt-Fk-w6W" id="rFd-jj-ndN"/>
+                    </connections>
                 </viewController>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="4y6-w0-FXM"/>
             </objects>
@@ -158,12 +207,20 @@
         </class>
         <class className="NMGestureViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NMGestureViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="exitButtonTouched:"/>
+                <relationship kind="outlet" name="exitButton" candidateClass="UIButton"/>
+            </relationships>
         </class>
         <class className="NMGlyphSearchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NMGlyphSearchViewController.h"/>
             <relationships>
+                <relationship kind="action" name="gestureButtonTouched:"/>
                 <relationship kind="outlet" name="foundItemLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gestureButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="gestureLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="gestureParentView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="listTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="saveButton" candidateClass="UIButton"/>
             </relationships>
         </class>
@@ -178,6 +235,7 @@
                 <relationship kind="outlet" name="itemAbbreviationTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="itemNameTextfield" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="listTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="noneLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

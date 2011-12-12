@@ -11,10 +11,10 @@
 @implementation NMAppDelegate
 
 @synthesize window = _window;
-
+@synthesize items;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
+    items = [NSMutableArray arrayWithCapacity:1];
     [TestFlight takeOff:@"Insert your Team Token here"];    
     return YES;
 }

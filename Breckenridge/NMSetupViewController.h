@@ -15,11 +15,11 @@
 }
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
-@property (strong, nonatomic) NSMutableArray *items;
 
 @property (weak, nonatomic) IBOutlet UITextField *itemNameTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *itemAbbreviationTextField;
 
 - (IBAction)addItem:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *noneLabel;
 
 @end
