@@ -9,5 +9,5 @@
 #import <CoreData/CoreData.h>
 
 @interface NSManagedObjectContext (NM)
-
+- (void) save;
 @end

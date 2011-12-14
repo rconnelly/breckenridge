@@ -13,7 +13,7 @@
 @property (nonatomic, strong) NSMutableArray *observedObjectContexts;
 @property (nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-- (NSManagedObjectModel *)newManagedObjectModel;
+- (NSManagedObjectModel *) newManagedObjectModel;
 - (NSManagedObjectContext *) newManagedObjectContext;
 + (CoreDataManager *) sharedInstance;
 @end

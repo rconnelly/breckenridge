@@ -76,6 +76,10 @@ static CoreDataManager *coreDataManager;
     return coreDataManager;
 }
 
+- (NSManagedObjectModel *) newManagedObjectModel
+{
+    return [NSManagedObjectModel mergedModelFromBundles:nil];
+}
 
 - (NSManagedObjectContext *) newManagedObjectContext
 {

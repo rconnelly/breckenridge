@@ -11,8 +11,9 @@
 #import "NMListEditViewController.h"
 #import "NMItemModel.h"
 #import "NMAppDelegate.h"
-#i
+#import "Item.h"
 #import "CoreDataManager.h"
+#import "NSManagedObjectContext+NM.h"
 
 @implementation NMListEditViewController
 
@@ -166,7 +167,6 @@
     NSArray *indexes = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:self.items.count-1 inSection:0]];
         rowCount++;
     [self.listTableView insertRowsAtIndexPaths:indexes withRowAnimation:UITableViewRowAnimationLeft];
-  //  [self.listTableView reloadData];
     self.itemNameTextfield.text = nil;
     self.itemAbbreviationTextField.text = nil;
     [self.itemNameTextfield resignFirstResponder];
