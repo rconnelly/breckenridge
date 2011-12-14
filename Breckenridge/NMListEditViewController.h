@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NMSetupViewController : UIViewController <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface NMListEditViewController : UIViewController <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
 {
     id textFieldFirstResponder;
     NSInteger rowCount;

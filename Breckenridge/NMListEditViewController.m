@@ -6,11 +6,16 @@
 //  Copyright (c) 2011 Nomad Apps, LLC. All rights reserved.
 //
 
-#import "NMSetupViewController.h"
+#import <CoreData/CoreData.h>
+#import <QuartzCore/QuartzCore.h>
+#import "NMListEditViewController.h"
 #import "NMItemModel.h"
 #import "NMAppDelegate.h"
+#i
+#import "CoreDataManager.h"
 
-@implementation NMSetupViewController
+@implementation NMListEditViewController
+
 @synthesize noneLabel;
 @synthesize addButton;
 @synthesize listTableView;
@@ -51,6 +56,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.listTableView.layer.cornerRadius = 8.0f;
+    self.listTableView.layer.borderWidth = 1.0f;
+    self.listTableView.layer.borderColor = [[UIColor grayColor] CGColor];
+    [NMKeyboardManager sharedManager].activeToolbarType = NMKeyboardToolbarCancel;
+    
 }
 
 - (void)viewDidUnload
@@ -71,7 +81,6 @@
         [textFieldFirstResponder resignFirstResponder];
     textFieldFirstResponder = nil;
 }
-
 
 #pragma mark - UITextFieldDelegate
 
@@ -163,7 +172,13 @@
     [self.itemNameTextfield resignFirstResponder];
     [self.itemAbbreviationTextField resignFirstResponder];
     [self setEditing:NO];
-    
     noneLabel.hidden = YES;
+    
+    NSManagedObjectContext *context = [[CoreDataManager sharedInstance] newManagedObjectContext];
+    Item *itemModel = [NSEntityDescription insertNewObjectForEntityForName:@"Item"
+                                                               inManagedObjectContext:context]; 
+    
+    [context insertObject:itemModel];
+    [context save];
 }
 @end

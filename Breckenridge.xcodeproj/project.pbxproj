@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C63FB3491497BA4D007961C1 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C63FB3441497BA4D007961C1 /* Item.m */; };
+		C63FB34A1497BA4D007961C1 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = C63FB3461497BA4D007961C1 /* List.m */; };
+		C63FB34B1497BA4D007961C1 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = C63FB3481497BA4D007961C1 /* Word.m */; };
 		C682672D1495619300EC04A8 /* libWTMGlyph.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C682672614955F7F00EC04A8 /* libWTMGlyph.a */; };
 		C68267511495B37600EC04A8 /* A.json in Resources */ = {isa = PBXBuildFile; fileRef = C68267371495B37600EC04A8 /* A.json */; };
 		C68267521495B37600EC04A8 /* B.json in Resources */ = {isa = PBXBuildFile; fileRef = C68267381495B37600EC04A8 /* B.json */; };
@@ -35,6 +38,15 @@
 		C68267691495B37600EC04A8 /* Y.json in Resources */ = {isa = PBXBuildFile; fileRef = C682674F1495B37600EC04A8 /* Y.json */; };
 		C682676A1495B37600EC04A8 /* Z.json in Resources */ = {isa = PBXBuildFile; fileRef = C68267501495B37600EC04A8 /* Z.json */; };
 		C682676C1495B43F00EC04A8 /* glyphs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C682676B1495B43F00EC04A8 /* glyphs.plist */; };
+		C682676F1496F65B00EC04A8 /* NMListEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C682676E1496F65900EC04A8 /* NMListEditViewController.m */; };
+		C68267721496F87500EC04A8 /* NMKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C68267711496F87400EC04A8 /* NMKeyboardManager.m */; };
+		C68267751496F99C00EC04A8 /* UIView+NM.m in Sources */ = {isa = PBXBuildFile; fileRef = C68267741496F99C00EC04A8 /* UIView+NM.m */; };
+		C6826779149703D100EC04A8 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6826777149703D100EC04A8 /* DataModel.xcdatamodeld */; };
+		C682678E1497AB7800EC04A8 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C682678D1497AB7800EC04A8 /* CoreDataManager.m */; };
+		C68267911497ACF600EC04A8 /* NMManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C68267901497ACF500EC04A8 /* NMManagedObjectContext.m */; };
+		C68267931497AD3000EC04A8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68267921497AD2F00EC04A8 /* CoreData.framework */; };
+		C68267961497B88B00EC04A8 /* NSManagedObjectContext+NM.m in Sources */ = {isa = PBXBuildFile; fileRef = C68267951497B88B00EC04A8 /* NSManagedObjectContext+NM.m */; };
+		C68267991497B9AD00EC04A8 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = C68267981497B9AD00EC04A8 /* Category.m */; };
 		C6C9A6521488062100B25F2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C9A6511488062100B25F2D /* UIKit.framework */; };
 		C6C9A6541488062100B25F2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C9A6531488062100B25F2D /* Foundation.framework */; };
 		C6C9A6561488062100B25F2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C9A6551488062100B25F2D /* CoreGraphics.framework */; };
@@ -74,7 +86,7 @@
 		C6F88BD914928F06003322C5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F88BD814928F06003322C5 /* QuartzCore.framework */; };
 		C6F88BDB14928F22003322C5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F88BDA14928F22003322C5 /* OpenGLES.framework */; };
 		C6F88BF714929F61003322C5 /* NSObject+NM.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BF614929F61003322C5 /* NSObject+NM.m */; };
-		C6F88BFA1492C21B003322C5 /* NMSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BF91492C21A003322C5 /* NMSetupViewController.m */; };
+		C6F88BFA1492C21B003322C5 /* NMItemEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BF91492C21A003322C5 /* NMItemEditViewController.m */; };
 		C6F88BFD1492C4F7003322C5 /* NMItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F88BFC1492C4F7003322C5 /* NMItemModel.m */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +122,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C63FB3431497BA4D007961C1 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		C63FB3441497BA4D007961C1 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		C63FB3451497BA4D007961C1 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		C63FB3461497BA4D007961C1 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
+		C63FB3471497BA4D007961C1 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		C63FB3481497BA4D007961C1 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		C682671D14955F7F00EC04A8 /* WTMGlyph.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WTMGlyph.xcodeproj; path = "Breckenridge/ThirdParty/MultistrokeGestureRecognizer-iOS/WTMGlyph.xcodeproj"; sourceTree = "<group>"; };
 		C68267371495B37600EC04A8 /* A.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = A.json; path = Resources/Glyphs/A.json; sourceTree = "<group>"; };
 		C68267381495B37600EC04A8 /* B.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = B.json; path = Resources/Glyphs/B.json; sourceTree = "<group>"; };
@@ -138,6 +156,22 @@
 		C682674F1495B37600EC04A8 /* Y.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Y.json; path = Resources/Glyphs/Y.json; sourceTree = "<group>"; };
 		C68267501495B37600EC04A8 /* Z.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Z.json; path = Resources/Glyphs/Z.json; sourceTree = "<group>"; };
 		C682676B1495B43F00EC04A8 /* glyphs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = glyphs.plist; path = Resources/Glyphs/glyphs.plist; sourceTree = "<group>"; };
+		C682676D1496F65800EC04A8 /* NMListEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMListEditViewController.h; sourceTree = "<group>"; };
+		C682676E1496F65900EC04A8 /* NMListEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMListEditViewController.m; sourceTree = "<group>"; };
+		C68267701496F87400EC04A8 /* NMKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMKeyboardManager.h; sourceTree = "<group>"; };
+		C68267711496F87400EC04A8 /* NMKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMKeyboardManager.m; sourceTree = "<group>"; };
+		C68267731496F99C00EC04A8 /* UIView+NM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NM.h"; sourceTree = "<group>"; };
+		C68267741496F99C00EC04A8 /* UIView+NM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NM.m"; sourceTree = "<group>"; };
+		C6826778149703D100EC04A8 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		C682678C1497AB7800EC04A8 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		C682678D1497AB7800EC04A8 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		C682678F1497ACF500EC04A8 /* NMManagedObjectContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMManagedObjectContext.h; sourceTree = "<group>"; };
+		C68267901497ACF500EC04A8 /* NMManagedObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMManagedObjectContext.m; sourceTree = "<group>"; };
+		C68267921497AD2F00EC04A8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C68267941497B88B00EC04A8 /* NSManagedObjectContext+NM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+NM.h"; sourceTree = "<group>"; };
+		C68267951497B88B00EC04A8 /* NSManagedObjectContext+NM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+NM.m"; sourceTree = "<group>"; };
+		C68267971497B9AC00EC04A8 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		C68267981497B9AD00EC04A8 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		C6C9A64D1488062100B25F2D /* GlyphList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlyphList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C9A6511488062100B25F2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6C9A6531488062100B25F2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -195,8 +229,8 @@
 		C6F88BDA14928F22003322C5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		C6F88BF514929F61003322C5 /* NSObject+NM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NM.h"; sourceTree = "<group>"; };
 		C6F88BF614929F61003322C5 /* NSObject+NM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NM.m"; sourceTree = "<group>"; };
-		C6F88BF81492C21A003322C5 /* NMSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSetupViewController.h; sourceTree = "<group>"; };
-		C6F88BF91492C21A003322C5 /* NMSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSetupViewController.m; sourceTree = "<group>"; };
+		C6F88BF81492C21A003322C5 /* NMItemEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMItemEditViewController.h; sourceTree = "<group>"; };
+		C6F88BF91492C21A003322C5 /* NMItemEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMItemEditViewController.m; sourceTree = "<group>"; };
 		C6F88BFB1492C4F7003322C5 /* NMItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMItemModel.h; sourceTree = "<group>"; };
 		C6F88BFC1492C4F7003322C5 /* NMItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMItemModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68267931497AD3000EC04A8 /* CoreData.framework in Frameworks */,
 				C682672D1495619300EC04A8 /* libWTMGlyph.a in Frameworks */,
 				C6F88BDB14928F22003322C5 /* OpenGLES.framework in Frameworks */,
 				C6F88BD914928F06003322C5 /* QuartzCore.framework in Frameworks */,
@@ -271,9 +306,30 @@
 			name = Glyphs;
 			sourceTree = "<group>";
 		};
+		C68267761497007000EC04A8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C63FB3431497BA4D007961C1 /* Item.h */,
+				C63FB3441497BA4D007961C1 /* Item.m */,
+				C63FB3451497BA4D007961C1 /* List.h */,
+				C63FB3461497BA4D007961C1 /* List.m */,
+				C63FB3471497BA4D007961C1 /* Word.h */,
+				C63FB3481497BA4D007961C1 /* Word.m */,
+				C6826777149703D100EC04A8 /* DataModel.xcdatamodeld */,
+				C68267971497B9AC00EC04A8 /* Category.h */,
+				C68267981497B9AD00EC04A8 /* Category.m */,
+				C682678C1497AB7800EC04A8 /* CoreDataManager.h */,
+				C682678D1497AB7800EC04A8 /* CoreDataManager.m */,
+				C682678F1497ACF500EC04A8 /* NMManagedObjectContext.h */,
+				C68267901497ACF500EC04A8 /* NMManagedObjectContext.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		C6C9A6421488062100B25F2D = {
 			isa = PBXGroup;
 			children = (
+				C68267921497AD2F00EC04A8 /* CoreData.framework */,
 				C6F88BDA14928F22003322C5 /* OpenGLES.framework */,
 				C6F88BD814928F06003322C5 /* QuartzCore.framework */,
 				C6C9A6571488062100B25F2D /* Breckenridge */,
@@ -307,6 +363,7 @@
 		C6C9A6571488062100B25F2D /* Breckenridge */ = {
 			isa = PBXGroup;
 			children = (
+				C68267761497007000EC04A8 /* Data */,
 				C6F88BD414928CEF003322C5 /* Categories */,
 				C6F88BAF149285F3003322C5 /* Images */,
 				C6C9A6AE1488160600B25F2D /* ThirdParty */,
@@ -315,6 +372,8 @@
 				C6C9A6A814880C6800B25F2D /* Models */,
 				C6C9A6601488062100B25F2D /* NMAppDelegate.h */,
 				C6C9A6611488062100B25F2D /* NMAppDelegate.m */,
+				C68267701496F87400EC04A8 /* NMKeyboardManager.h */,
+				C68267711496F87400EC04A8 /* NMKeyboardManager.m */,
 				C6C9A6631488062100B25F2D /* NMRootViewController.h */,
 				C6C9A6641488062100B25F2D /* NMRootViewController.m */,
 				C6C9A6661488062100B25F2D /* NMDataViewController.h */,
@@ -328,8 +387,10 @@
 				C6C9A66C1488062100B25F2D /* MainStoryboard.storyboard */,
 				C6C9A6581488062100B25F2D /* Supporting Files */,
 				C6F88BD314928CC5003322C5 /* NMConstants.h */,
-				C6F88BF81492C21A003322C5 /* NMSetupViewController.h */,
-				C6F88BF91492C21A003322C5 /* NMSetupViewController.m */,
+				C682676D1496F65800EC04A8 /* NMListEditViewController.h */,
+				C682676E1496F65900EC04A8 /* NMListEditViewController.m */,
+				C6F88BF81492C21A003322C5 /* NMItemEditViewController.h */,
+				C6F88BF91492C21A003322C5 /* NMItemEditViewController.m */,
 			);
 			path = Breckenridge;
 			sourceTree = "<group>";
@@ -449,6 +510,10 @@
 				C6F88BD614928D0B003322C5 /* UIColor+NM.m */,
 				C6F88BF514929F61003322C5 /* NSObject+NM.h */,
 				C6F88BF614929F61003322C5 /* NSObject+NM.m */,
+				C68267731496F99C00EC04A8 /* UIView+NM.h */,
+				C68267741496F99C00EC04A8 /* UIView+NM.m */,
+				C68267941497B88B00EC04A8 /* NSManagedObjectContext+NM.h */,
+				C68267951497B88B00EC04A8 /* NSManagedObjectContext+NM.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -635,8 +700,19 @@
 				C6F88BD214928BC3003322C5 /* NMGestureDrawView.m in Sources */,
 				C6F88BD714928D0B003322C5 /* UIColor+NM.m in Sources */,
 				C6F88BF714929F61003322C5 /* NSObject+NM.m in Sources */,
-				C6F88BFA1492C21B003322C5 /* NMSetupViewController.m in Sources */,
+				C6F88BFA1492C21B003322C5 /* NMItemEditViewController.m in Sources */,
 				C6F88BFD1492C4F7003322C5 /* NMItemModel.m in Sources */,
+				C682676F1496F65B00EC04A8 /* NMListEditViewController.m in Sources */,
+				C68267721496F87500EC04A8 /* NMKeyboardManager.m in Sources */,
+				C68267751496F99C00EC04A8 /* UIView+NM.m in Sources */,
+				C6826779149703D100EC04A8 /* DataModel.xcdatamodeld in Sources */,
+				C682678E1497AB7800EC04A8 /* CoreDataManager.m in Sources */,
+				C68267911497ACF600EC04A8 /* NMManagedObjectContext.m in Sources */,
+				C68267961497B88B00EC04A8 /* NSManagedObjectContext+NM.m in Sources */,
+				C68267991497B9AD00EC04A8 /* Category.m in Sources */,
+				C63FB3491497BA4D007961C1 /* Item.m in Sources */,
+				C63FB34A1497BA4D007961C1 /* List.m in Sources */,
+				C63FB34B1497BA4D007961C1 /* Word.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,6 +988,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C6826777149703D100EC04A8 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C6826778149703D100EC04A8 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = C6826778149703D100EC04A8 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C6C9A6441488062100B25F2D /* Project object */;
 }

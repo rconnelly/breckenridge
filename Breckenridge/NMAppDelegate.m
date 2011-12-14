@@ -7,7 +7,7 @@
 //
 
 #import "NMAppDelegate.h"
-
+#import "NMKeyboardManager.h"
 @implementation NMAppDelegate
 
 @synthesize window = _window;
@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     items = [NSMutableArray arrayWithCapacity:1];
-    [TestFlight takeOff:@"Insert your Team Token here"];    
+    [TestFlight takeOff:@"Insert your Team Token here"];
     return YES;
 }
 

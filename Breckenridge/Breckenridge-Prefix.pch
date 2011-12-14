@@ -9,12 +9,27 @@
 #endif
 
 #ifdef __OBJC__
-    #import <UIKit/UIKit.h>
+
+#ifdef LOG_DEBUG
+
+#define DebugLog(s, ...) NSLog(@"<%@:%d (%@)> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__,  NSStringFromSelector(_cmd), [NSString stringWithFormat:(s), ##__VA_ARGS__])
+
+#define DebugLogTimerStart() NSDate *__DebugDate = [NSDate date]
+#define DebugLogTimerEnd() float __debugTimer_f = [[NSDate date] timeIntervalSinceDate:__DebugDate] / 1000.0; DebugLog(@"Debug Timer: Took %f to complete", __debugTimer_f);
+
+#else
+#define DebugLog(s, ...) 
+#define DebugLogTimerStart()
+#define DebugLogTimerEnd()
+#endif
+
+#import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 
 
     #import "TestFlight.h"
     #import "CheckPointNames.h"
     #import "NSObject+NM.h"
-
+    #import "UIView+NM.h"   
+    #import "NMKeyboardManager.h"
 #endif
