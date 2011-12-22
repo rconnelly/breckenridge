@@ -44,26 +44,26 @@
     
     char result = [self predict:grid gridSize:20];
     
-    bool new_file = true;;
-    const char *filename = "/Users/Marat/mydata_15.m";
-    FILE *file = fopen(filename, "r");
-    
-    if (file) {
-        new_file = false;
-        fclose(file);
-    }
-    file = fopen(filename, "a");
-    if (new_file) fprintf(file, "clear mydata;\nmydata = [" );
-    else fprintf(file, "mydata = [mydata; [" );
-    for( int i=0; i<20; ++i ) {
-        for( int j=0; j<20; ++j ) {
-            fprintf(file, "%f ", grid[j*20 + i]);
-        }
-        fprintf(file, " " );
-    }
-    if (new_file) fprintf(file, "];\n");
-    else fprintf(file, "] ];\n");
-    fclose(file);
+//    bool new_file = true;
+//    const char *filename = "~/mydata_15.m";
+//    FILE *file = fopen(filename, "r");
+//    
+//    if (file) {
+//        new_file = false;
+//        fclose(file);
+//    }
+//    file = fopen(filename, "a");
+//    if (new_file) fprintf(file, "clear mydata;\nmydata = [" );
+//    else fprintf(file, "mydata = [mydata; [" );
+//    for( int i=0; i<20; ++i ) {
+//        for( int j=0; j<20; ++j ) {
+//            fprintf(file, "%f ", grid[j*20 + i]);
+//        }
+//        fprintf(file, " " );
+//    }
+//    if (new_file) fprintf(file, "];\n");
+//    else fprintf(file, "] ];\n");
+//    fclose(file);
 
     
     free(grid);
