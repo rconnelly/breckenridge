@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7954ED1F14A3C1F3003B98E3 /* NMGlyphDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7954ED1E14A3C1F3003B98E3 /* NMGlyphDetector.m */; };
 		C63FB3491497BA4D007961C1 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C63FB3441497BA4D007961C1 /* Item.m */; };
 		C63FB34A1497BA4D007961C1 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = C63FB3461497BA4D007961C1 /* List.m */; };
 		C63FB34B1497BA4D007961C1 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = C63FB3481497BA4D007961C1 /* Word.m */; };
@@ -122,6 +123,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7954ED1D14A3C1F3003B98E3 /* NMGlyphDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMGlyphDetector.h; sourceTree = "<group>"; };
+		7954ED1E14A3C1F3003B98E3 /* NMGlyphDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMGlyphDetector.m; sourceTree = "<group>"; };
 		C63FB3431497BA4D007961C1 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C63FB3441497BA4D007961C1 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C63FB3451497BA4D007961C1 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
@@ -382,6 +385,8 @@
 				C6C9A66A1488062100B25F2D /* NMModelController.m */,
 				C6C9A76F148959A400B25F2D /* NMGlyphSearchViewController.h */,
 				C6C9A770148959A400B25F2D /* NMGlyphSearchViewController.m */,
+				7954ED1D14A3C1F3003B98E3 /* NMGlyphDetector.h */,
+				7954ED1E14A3C1F3003B98E3 /* NMGlyphDetector.m */,
 				C6F88BAC14927EB5003322C5 /* NMGestureViewController.h */,
 				C6F88BAD14927EB5003322C5 /* NMGestureViewController.m */,
 				C6C9A66C1488062100B25F2D /* MainStoryboard.storyboard */,
@@ -713,6 +718,7 @@
 				C63FB3491497BA4D007961C1 /* Item.m in Sources */,
 				C63FB34A1497BA4D007961C1 /* List.m in Sources */,
 				C63FB34B1497BA4D007961C1 /* Word.m in Sources */,
+				7954ED1F14A3C1F3003B98E3 /* NMGlyphDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

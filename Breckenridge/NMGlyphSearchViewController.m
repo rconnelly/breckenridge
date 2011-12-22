@@ -71,7 +71,8 @@
     gdv = (NMGestureDrawView *)gestureViewController.view;
     gdv.delegate = self;
     
-    glyphDetector = [self newGlyphDetector];
+    //glyphDetector = [self newGlyphDetector];
+    glyphDetector = [[NMGlyphDetector alloc] init];
     glyphDetector.delegate = self;
     
     searchPhrases = [NSMutableArray arrayWithCapacity:1];
@@ -206,6 +207,12 @@
      view.tag = 1;
      [view show];
      */
+}
+
+- (void)firstResult:(char)result
+{
+    [gestureLabel setText:[NSString stringWithFormat:@"%c", result]];
+    [self.glyphDetector reset];
 }
 
 - (void) didBeginDrawGesture:(NMGesture *)gesture

@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NMGlyphDetector.h"
 #import "NMGestureDrawView.h"
 #import "ThirdParty/MultistrokeGestureRecognizer-iOS/WTMGlyph/WTMGlyphDelegate.h"
 
 @class NMGestureViewController, WTMGlyphDetector, NMGestureDrawView;
 
-@interface NMGlyphSearchViewController : UIViewController <UITextFieldDelegate, NMGestureDrawViewDelegate, WTMGlyphDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface NMGlyphSearchViewController : UIViewController <UITextFieldDelegate, NMGestureDrawViewDelegate, WTMGlyphDelegate, NMGlyphDelegate, UITableViewDelegate, UITableViewDataSource>
 {
     id textFieldFirstResponder;
 }
@@ -23,7 +24,8 @@
 @property (weak, nonatomic) IBOutlet UIView *gestureParentView;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UILabel *foundItemLabel;
-@property (strong, nonatomic) WTMGlyphDetector *glyphDetector;
+//@property (strong, nonatomic) WTMGlyphDetector *glyphDetector;
+@property (strong, nonatomic) NMGlyphDetector *glyphDetector;
 @property (weak, nonatomic) NMGestureDrawView *gdv;
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
 
