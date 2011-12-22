@@ -54,11 +54,11 @@
                     <connections>
                         <outlet property="itemNameTextfield" destination="ySZ-Nw-XQe" id="aUt-km-2iU"/>
                         <outlet property="listTableView" destination="Tj4-ii-Mpu" id="ZRj-XN-5KI"/>
-                        <segue destination="Thl-GL-8Dz" kind="push" id="vPQ-l4-fxV"/>
+                        <segue destination="Avc-U3-V8z" kind="push" id="Szt-ld-KpR"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1898" y="727"/>
+            <point key="canvasLocation" x="1894" y="145"/>
         </scene>
         <scene sceneID="sHv-6i-bXL">
             <objects>
@@ -121,7 +121,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Lists" id="ZEb-mW-xSx"/>
                     <navigationItem key="navigationItem" title="Items" id="rD7-eA-TJz">
-                        <barButtonItem key="rightBarButtonItem" title="Add Word" id="fJ9-7A-fPR"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add Word" id="fJ9-7A-fPR">
+                            <connections>
+                                <segue destination="Thl-GL-8Dz" kind="push" id="79j-nF-G1v"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="gestureButton" destination="vP9-L6-RMy" id="0qS-Cr-ywz"/>
@@ -141,7 +145,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2332" y="137"/>
+            <point key="canvasLocation" x="1894" y="732"/>
         </scene>
         <scene sceneID="LDs-Es-Kxj">
             <objects>
@@ -262,7 +266,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ibB-0a-Sqe" kind="relationship" relationship="rootViewController" id="0Ej-bN-QNX"/>
+                        <segue destination="7dh-Qq-3WF" kind="relationship" relationship="rootViewController" id="wGs-14-9KN"/>
                     </connections>
                 </navigationController>
             </objects>
@@ -279,7 +283,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Avc-U3-V8z" kind="relationship" relationship="rootViewController" id="3ZS-g6-F7t"/>
+                        <segue destination="ibB-0a-Sqe" kind="relationship" relationship="rootViewController" id="nsJ-4u-g5s"/>
                     </connections>
                 </navigationController>
             </objects>
@@ -320,11 +324,10 @@
                     <connections>
                         <outlet property="itemNameTextfield" destination="s1O-Uy-8xV" id="Ecs-Dk-3eZ"/>
                         <outlet property="listTableView" destination="sy4-aa-0tA" id="NEY-MG-zNE"/>
-                        <segue destination="7dh-Qq-3WF" kind="push" id="xaX-FS-5QQ"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1898" y="145"/>
+            <point key="canvasLocation" x="2332" y="145"/>
         </scene>
     </scenes>
     <classes>
@@ -355,6 +358,14 @@
         </class>
         <class className="NMItemEditViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NMItemEditViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addItem:"/>
+                <relationship kind="outlet" name="addButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="itemAbbreviationTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="itemNameTextfield" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="listTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="noneLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="NMListEditViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NMListEditViewController.h"/>
