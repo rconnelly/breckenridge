@@ -209,9 +209,13 @@
      */
 }
 
-- (void)firstResult:(char)result
+- (void)firstResults:(char *)results size:(int)size
 {
-    [gestureLabel setText:[NSString stringWithFormat:@"%c", result]];
+    [gestureLabel setText:@""];
+    for (int i=0; i<size; ++i) {
+        if (i==0) [gestureLabel setText:[NSString stringWithFormat:@"%c  ", results[i]]];
+        else [gestureLabel setText:[NSString stringWithFormat:@"%@ (%c)", gestureLabel.text, results[i]]];
+    }
     [self.glyphDetector reset];
 }
 

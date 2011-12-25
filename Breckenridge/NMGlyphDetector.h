@@ -13,7 +13,7 @@
 @optional
 //- (void)glyphDetected:(WTMGlyph *)glyph withScore:(float)score;
 - (void)glyphResults:(NSArray *)results;
-- (void)firstResult:(char)result;
+- (void)firstResults:(char*)results size:(int)size;
 
 @end
 
@@ -37,6 +37,6 @@
 
 - (float*)createSquare:(int)gridSize;
 
-- (char)predict:(float*)grid gridSize:(int)gridSize;
+- (void)predict:(float*)grid gridSize:(int)gridSize results:(char*)results size:(int)size;
 
 @end
