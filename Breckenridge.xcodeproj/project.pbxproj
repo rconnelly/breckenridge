@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7954ED1F14A3C1F3003B98E3 /* NMGlyphDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7954ED1E14A3C1F3003B98E3 /* NMGlyphDetector.m */; };
+		7954ED1F14A3C1F3003B98E3 /* NMGlyphDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7954ED1E14A3C1F3003B98E3 /* NMGlyphDetector.mm */; };
+		79C02D7A14CBF3FE00BDBA01 /* libcv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C02D6414CBEE0C00BDBA01 /* libcv.a */; };
+		79C02D7B14CBF3FE00BDBA01 /* libcvaux.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C02D6514CBEE0C00BDBA01 /* libcvaux.a */; };
+		79C02D7C14CBF3FE00BDBA01 /* libcxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C02D6614CBEE0C00BDBA01 /* libcxcore.a */; };
+		79C02D7D14CBF3FE00BDBA01 /* libml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C02D6714CBEE0C00BDBA01 /* libml.a */; };
+		79C02D7F14CBF45600BDBA01 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C02D7E14CBF45600BDBA01 /* Accelerate.framework */; };
+		79C754E5152646E300E0CF92 /* digits_16_mlp.xml in Resources */ = {isa = PBXBuildFile; fileRef = 79C754E4152646E300E0CF92 /* digits_16_mlp.xml */; };
+		79F9B4B714CBF53B009F95C7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F9B4B614CBF53B009F95C7 /* AudioToolbox.framework */; };
 		C63FB3491497BA4D007961C1 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C63FB3441497BA4D007961C1 /* Item.m */; };
 		C63FB34A1497BA4D007961C1 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = C63FB3461497BA4D007961C1 /* List.m */; };
 		C63FB34B1497BA4D007961C1 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = C63FB3481497BA4D007961C1 /* Word.m */; };
@@ -124,7 +131,14 @@
 
 /* Begin PBXFileReference section */
 		7954ED1D14A3C1F3003B98E3 /* NMGlyphDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMGlyphDetector.h; sourceTree = "<group>"; };
-		7954ED1E14A3C1F3003B98E3 /* NMGlyphDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMGlyphDetector.m; sourceTree = "<group>"; };
+		7954ED1E14A3C1F3003B98E3 /* NMGlyphDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NMGlyphDetector.mm; sourceTree = "<group>"; };
+		79C02D6414CBEE0C00BDBA01 /* libcv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcv.a; path = Breckenridge/ThirdParty/openCV/lib/libcv.a; sourceTree = "<group>"; };
+		79C02D6514CBEE0C00BDBA01 /* libcvaux.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcvaux.a; path = Breckenridge/ThirdParty/openCV/lib/libcvaux.a; sourceTree = "<group>"; };
+		79C02D6614CBEE0C00BDBA01 /* libcxcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcxcore.a; path = Breckenridge/ThirdParty/openCV/lib/libcxcore.a; sourceTree = "<group>"; };
+		79C02D6714CBEE0C00BDBA01 /* libml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libml.a; path = Breckenridge/ThirdParty/openCV/lib/libml.a; sourceTree = "<group>"; };
+		79C02D7E14CBF45600BDBA01 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		79C754E4152646E300E0CF92 /* digits_16_mlp.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = digits_16_mlp.xml; sourceTree = "<group>"; };
+		79F9B4B614CBF53B009F95C7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C63FB3431497BA4D007961C1 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		C63FB3441497BA4D007961C1 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		C63FB3451497BA4D007961C1 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
@@ -243,6 +257,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F9B4B714CBF53B009F95C7 /* AudioToolbox.framework in Frameworks */,
+				79C02D7F14CBF45600BDBA01 /* Accelerate.framework in Frameworks */,
 				C68267931497AD3000EC04A8 /* CoreData.framework in Frameworks */,
 				C682672D1495619300EC04A8 /* libWTMGlyph.a in Frameworks */,
 				C6F88BDB14928F22003322C5 /* OpenGLES.framework in Frameworks */,
@@ -251,6 +267,10 @@
 				C6C9A6541488062100B25F2D /* Foundation.framework in Frameworks */,
 				C6C9A6561488062100B25F2D /* CoreGraphics.framework in Frameworks */,
 				C6C9A6B21488162500B25F2D /* libTestFlight.a in Frameworks */,
+				79C02D7A14CBF3FE00BDBA01 /* libcv.a in Frameworks */,
+				79C02D7B14CBF3FE00BDBA01 /* libcvaux.a in Frameworks */,
+				79C02D7C14CBF3FE00BDBA01 /* libcxcore.a in Frameworks */,
+				79C02D7D14CBF3FE00BDBA01 /* libml.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,9 +352,9 @@
 		C6C9A6421488062100B25F2D = {
 			isa = PBXGroup;
 			children = (
-				C68267921497AD2F00EC04A8 /* CoreData.framework */,
-				C6F88BDA14928F22003322C5 /* OpenGLES.framework */,
-				C6F88BD814928F06003322C5 /* QuartzCore.framework */,
+				79C754E4152646E300E0CF92 /* digits_16_mlp.xml */,
+				79F9B4B614CBF53B009F95C7 /* AudioToolbox.framework */,
+				79C02D7E14CBF45600BDBA01 /* Accelerate.framework */,
 				C6C9A6571488062100B25F2D /* Breckenridge */,
 				C6C9A67B1488062100B25F2D /* BreckenridgeTests */,
 				C6C9A6501488062100B25F2D /* Frameworks */,
@@ -354,6 +374,13 @@
 		C6C9A6501488062100B25F2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79C02D6414CBEE0C00BDBA01 /* libcv.a */,
+				79C02D6514CBEE0C00BDBA01 /* libcvaux.a */,
+				79C02D6614CBEE0C00BDBA01 /* libcxcore.a */,
+				79C02D6714CBEE0C00BDBA01 /* libml.a */,
+				C68267921497AD2F00EC04A8 /* CoreData.framework */,
+				C6F88BDA14928F22003322C5 /* OpenGLES.framework */,
+				C6F88BD814928F06003322C5 /* QuartzCore.framework */,
 				C682671D14955F7F00EC04A8 /* WTMGlyph.xcodeproj */,
 				C6C9A6511488062100B25F2D /* UIKit.framework */,
 				C6C9A6531488062100B25F2D /* Foundation.framework */,
@@ -386,7 +413,7 @@
 				C6C9A76F148959A400B25F2D /* NMGlyphSearchViewController.h */,
 				C6C9A770148959A400B25F2D /* NMGlyphSearchViewController.m */,
 				7954ED1D14A3C1F3003B98E3 /* NMGlyphDetector.h */,
-				7954ED1E14A3C1F3003B98E3 /* NMGlyphDetector.m */,
+				7954ED1E14A3C1F3003B98E3 /* NMGlyphDetector.mm */,
 				C6F88BAC14927EB5003322C5 /* NMGestureViewController.h */,
 				C6F88BAD14927EB5003322C5 /* NMGestureViewController.m */,
 				C6C9A66C1488062100B25F2D /* MainStoryboard.storyboard */,
@@ -618,6 +645,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C754E5152646E300E0CF92 /* digits_16_mlp.xml in Resources */,
 				C6C9A65C1488062100B25F2D /* InfoPlist.strings in Resources */,
 				C6C9A66E1488062100B25F2D /* MainStoryboard.storyboard in Resources */,
 				C6F88BBD149285F3003322C5 /* greenButton.png in Resources */,
@@ -718,7 +746,7 @@
 				C63FB3491497BA4D007961C1 /* Item.m in Sources */,
 				C63FB34A1497BA4D007961C1 /* List.m in Sources */,
 				C63FB34B1497BA4D007961C1 /* Word.m in Sources */,
-				7954ED1F14A3C1F3003B98E3 /* NMGlyphDetector.m in Sources */,
+				7954ED1F14A3C1F3003B98E3 /* NMGlyphDetector.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +824,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lstdc++",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -815,6 +848,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lstdc++",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -826,6 +863,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/openCV/include\"",
 					ThirdParty/TestFlightSDK0.8.1,
 					"ThirdParty/MultistrokeGestureRecognizer-iOS/",
 				);
@@ -833,6 +871,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/openCV/lib\"",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/openCV/simulator\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lstdc++",
 				);
 				PRODUCT_NAME = GlyphList;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1/\"/**";
@@ -847,6 +891,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/openCV/include\"",
 					ThirdParty/TestFlightSDK0.8.1,
 					"ThirdParty/MultistrokeGestureRecognizer-iOS/",
 				);
@@ -854,6 +899,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/openCV/lib\"",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/openCV/simulator\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lstdc++",
 				);
 				PRODUCT_NAME = GlyphList;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -917,6 +968,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lstdc++",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = "Ad Hoc Dev";
@@ -928,6 +984,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breckenridge/Breckenridge-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/openCV/include\"",
 					ThirdParty/TestFlightSDK0.8.1,
 					"ThirdParty/MultistrokeGestureRecognizer-iOS/",
 				);
@@ -935,6 +992,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Breckenridge/ThirdParty/TestFlightSDK0.8.1\"",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/openCV/lib\"",
+					"\"$(SRCROOT)/Breckenridge/ThirdParty/openCV/simulator\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lstdc++",
 				);
 				PRODUCT_NAME = GlyphList;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

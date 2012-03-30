@@ -47,6 +47,8 @@
     }
     
     CGPoint p = [touch locationInView:self];
+    p.x = floorf(p.x);
+    p.y = floorf(p.y);
     [self.gesture.points addObject:[NSValue valueWithCGPoint:p]];
     [self setNeedsDisplay];
     
@@ -56,6 +58,8 @@
 {
 	UITouch *touch = [touches anyObject];
 	CGPoint p = [touch locationInView:self];
+    p.x = floorf(p.x);
+    p.y = floorf(p.y);
     [self.gesture.points addObject:[NSValue valueWithCGPoint:p]];
 
     if ([delegate respondsToSelector:@selector(didAddPoint:)])

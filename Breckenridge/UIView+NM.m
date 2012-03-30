@@ -82,12 +82,12 @@
     return fields; 
 }  
 
-- (id) parentWithClass:(Class)class
+- (id) parentWithClass:(Class)cl
 {
     
     UIView *parentView = [self superview];
     while (parentView) {
-        if([parentView isKindOfClass:class])
+        if([parentView isKindOfClass:cl])
         {
             return (UIScrollView *)parentView;
         }

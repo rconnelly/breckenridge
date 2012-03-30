@@ -23,7 +23,7 @@
 
 /** @abstract Returns the first parent that belongs to the specified class.
  */
-- (id) parentWithClass:(Class)class;
+- (id) parentWithClass:(Class)cl;
 
 /** Returns the previous textfield with the same parent. Searches the parent view only. */
 - (UIView *) prevTextFieldOrView;

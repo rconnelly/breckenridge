@@ -72,7 +72,7 @@
     gdv.delegate = self;
     
     //glyphDetector = [self newGlyphDetector];
-    glyphDetector = [[NMGlyphDetector alloc] init];
+    glyphDetector = [NMGlyphDetector sharedInstance];
     glyphDetector.delegate = self;
     
     searchPhrases = [NSMutableArray arrayWithCapacity:1];

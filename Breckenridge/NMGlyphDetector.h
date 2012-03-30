@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class NMGlyphSearchViewController;
 @protocol NMGlyphDelegate <NSObject>
 
 @optional
@@ -18,25 +19,21 @@
 @end
 
 
-@interface NMGlyphDetector : NSObject {
-    CGPoint minBn;
-    CGPoint maxBn;
+@interface NMGlyphDetector : NSObject
+{
 }
-@property (nonatomic, assign) id delegate;
+@property (nonatomic, assign) NMGlyphSearchViewController * delegate;
 @property (nonatomic, strong) NSMutableArray *points;
 
-+ (id)detector;
-+ (id)defaultDetector;
+//+ (id)detector;
+//+ (id)defaultDetector;
++ (id)sharedInstance;
 - (id)init;
 
 - (void)addPoint:(CGPoint)point;
 - (void)detectGlyph;
 - (void)reset;
 
-- (void)calcBnBoxWithAddPoints;
-
-- (float*)createSquare:(int)gridSize;
-
-- (void)predict:(float*)grid gridSize:(int)gridSize results:(char*)results size:(int)size;
+- (void)addPoints;
 
 @end
